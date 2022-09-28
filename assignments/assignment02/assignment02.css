@@ -1,8 +1,9 @@
 /* file: assignment02.css
-   author: george corser (gpcorser@svsu.edu)
+   author: Alex Lux with code borrowed from george corser (gpcorser@svsu.edu)
 */
 
 /* --- put your css here --- */ 
+body{color: skyblue;}
 
 /* external css is imported into html using the <link> tag in the <head> section, as shown below.
 
