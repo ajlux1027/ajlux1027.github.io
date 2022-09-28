@@ -3,7 +3,7 @@
 */
 
 /* --- put your css here --- */ 
-body{color: skyblue;}
+body{background-color: skyblue;}
 
 /* external css is imported into html using the <link> tag in the <head> section, as shown below.
 
