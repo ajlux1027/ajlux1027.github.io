@@ -43,6 +43,10 @@ img[alt="bird icon"]   {
    left: 250px;  
    z-index: 1;  
 }  
+#positionMe {   
+   position: relative;   
+}  
+
 /*the css for Part D*/
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
