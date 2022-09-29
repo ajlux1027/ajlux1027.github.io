@@ -31,6 +31,18 @@ SPAN.c{display:inline-block;}
    bottom: 0;  
    z-index: 1;  
 } 
+img[alt="dog icon"]   {  
+   position: relative;  
+   right: 50px;  
+   bottom: 150px;  
+}  
+ 
+img[alt="bird icon"]   {  
+   position: absolute;  
+   top: 50px;  
+   left: 250px;  
+   z-index: 1;  
+}  
 /*the css for Part D*/
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
