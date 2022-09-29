@@ -25,6 +25,12 @@ SPAN.c{display:inline-block;}
 
 
 /*the css for Part C*/
+ img[alt="cat icon"]   {  
+   position: fixed;  
+   right: 0;  
+   bottom: 0;  
+   z-index: 1;  
+} 
 /*the css for Part D*/
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
