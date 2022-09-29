@@ -19,6 +19,10 @@ SPAN{height: 50px;
    border: 5px solid blue;
    background-color: yellow;}
 
+SPAN.a{display:inline;}  
+SPAN.b{display:block;}  
+SPAN.c{display:inline-block;}   
+
 
 /*the css for Part C*/
 /*the css for Part D*/
