@@ -18,18 +18,10 @@ SPAN{height: 50px;
    padding-right: 20px;
    border: 5px solid blue;
    background-color: yellow;}
+
+
 /*the css for Part C*/
 /*the css for Part D*/
-
-/* external css is imported into html using the <link> tag in the <head> section, as shown below.
-
-  <head>
-    <link rel="stylesheet" href="assignment02.css">
-  </head>
-
-*/
-
-
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
   background-color: gray;
@@ -50,3 +42,12 @@ SPAN{height: 50px;
 input[type="text"].pinkey:focus {
   background-color: pink;
 }
+/* external css is imported into html using the <link> tag in the <head> section, as shown below.
+
+  <head>
+    <link rel="stylesheet" href="assignment02.css">
+  </head>
+
+*/
+
+
