@@ -47,6 +47,14 @@ img[alt="bird icon"]   {
    position: relative;   
 }  
 
+nav{
+   position: sticky;  
+   top: 0;  
+   background-color: rgba(0,   255,   0,   0.9);  
+   padding: 5px;  
+   font-size: 20px;  
+   z-index: 2;  
+} 
 /*the css for Part D*/
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
