@@ -4,12 +4,17 @@
 
 /* --- put your css here --- */ 
 /*the css for Part A*/
+/*make the background blue*/
 body{background-color: skyblue;}
+/*make it so the i gotta be me id is of the Arial font family*/
 #igottabeme{font-family: Arial, Helvetica, sans-serif;}
+/*make the classy class have a 10 pixel margin to the left*/
 .classy{margin-left: 10px;}
 
 /*the css for Part B*/
+/* add a 10 pixel margin to the bottom of div*/
 div{margin-bottom: 50px;}
+/*add the padding, height width, and highlight to the SPAN*/
 SPAN{height: 50px;
    width: 100px; 
    padding-top: 5px; 
@@ -18,35 +23,39 @@ SPAN{height: 50px;
    padding-right: 20px;
    border: 5px solid blue;
    background-color: yellow;}
-
+/*customze which span of which class gets certain formatting*/
 SPAN.a{display:inline;}  
 SPAN.b{display:block;}  
 SPAN.c{display:inline-block;}   
 
 
 /*the css for Part C*/
+/*make it so the cat image is fixed in the bottom corner*/
  img[alt="cat icon"]   {  
    position: fixed;  
    right: 0;  
    bottom: 0;  
    z-index: 1;  
 } 
+/*make it so the dog is fixed in a relative location*/
 img[alt="dog icon"]   {  
    position: relative;  
    right: 50px;  
    bottom: 150px;  
 }  
- 
+ /*make it so the bird is fixed in an absolute location*/
 img[alt="bird icon"]   {  
    position: absolute;  
    top: 50px;  
    left: 250px;  
    z-index: 1;  
 }  
+/*make the location for the bird*/
 #positionMe {   
    position: relative;   
 }  
 
+/*make it so the nav bar sticks when the scroll down*/
 nav{
    position: sticky;  
    top: 0;  
@@ -55,6 +64,7 @@ nav{
    font-size: 20px;  
    z-index: 2;  
 } 
+
 /*the css for Part D*/
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
