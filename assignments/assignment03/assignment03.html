@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head> 
-  <!--Make a style to have a black border for the table->
+  <!--Make a style to have a black border for the table-->
   <style>
 th{border: 1px solid black;}
 </style>
@@ -17,7 +17,7 @@ th{border: 1px solid black;}
  <h3> 3A) Temperature Converter</h3>
 <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
   <!--make a table around the temp converter-->
-<table style="width:100%">
+<table style="width:50%">
   <tr>
     <th>
 <p>
@@ -33,9 +33,9 @@ th{border: 1px solid black;}
 </tr>
 <script>
 function temperatureConverter() {
- <!--have the input be turned into a float variable-->
+ //have the input be turned into a float variable
   valNum = parseFloat(document.getElementById("inputFahrenheit").value);
- <!--have the output show the result of the conversion-->
+ //have the output show the result of the conversion-
   document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
 </script>
 
