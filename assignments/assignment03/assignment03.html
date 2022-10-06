@@ -3,7 +3,7 @@
  <head> 
   <!--Make a style to have a black border for the table-->
   <style>
-th{border: 1px solid black;}
+th,tr{border: 1px solid black; }
 </style>
 <!-- make the title for the webpage-->
   <title>Alex's Assignment 03 Apps</title> 
@@ -14,13 +14,12 @@ th{border: 1px solid black;}
 <h1> Alex's Assignment 03 Apps</h1>
 <!--Make the apps able to be open-->
  <h2>Apps</h2>
- <h3> 3A) Temperature Converter</h3> 
-  <!--make a table around the temp converter-->
-<table style="width:50%">
+ <h3> 3A) Temperature Converter</h3>  
+ <!--make a table around the temp converter-->
+<table style="width:100%">
   <tr>
     <th>
 <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
-
 <p>
   <label>Fahrenheit</label>
  <!--make an input box to take the fahrenheit from the user-->
@@ -32,6 +31,7 @@ th{border: 1px solid black;}
 <p>Celcius: <span id="outputCelcius"></span></p>
 </th>
 </tr>
+
 <script>
 function temperatureConverter() {
  //have the input be turned into a float variable
@@ -40,10 +40,13 @@ function temperatureConverter() {
   document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
 </script>
 
+<h3> 3B) GCD Finder</h3>
 <a href= "#">Find the GCD</a><br />
+<h3> 3C) Compute Sum of Digits</h3>
 <a href="#">Compute sum of digits</a><br />
+<h3> 3D) Make String From Input</h3>
 <a href="#">Generate new string from input</a><br />
+<h3> 3E) Tic-Tac-Toe</h3>
 <a href="#">Tic-Tac-Toe</a><br />
    
    </body>
-
