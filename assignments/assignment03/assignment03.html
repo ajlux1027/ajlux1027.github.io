@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
  <head> 
+  <!--Make a style to have a black border for the table->
   <style>
 th{border: 1px solid black;}
 </style>
+<!-- make the title for the webpage-->
   <title>Alex's Assignment 03 Apps</title> 
   <!--Set the page head--> 
  </head> 
@@ -14,20 +16,26 @@ th{border: 1px solid black;}
  <h2>Apps</h2>
  <h3> 3A) Temperature Converter</h3>
 <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+  <!--make a table around the temp converter-->
 <table style="width:100%">
   <tr>
     <th>
 <p>
   <label>Fahrenheit</label>
+ <!--make an input box to take the fahrenheit from the user-->
   <input id="inputFahrenheit" type="number" placeholder="Fahrenheit">
- <button type="button" onclick="temperatureConverter();">Click Me!</button>
+ <!--have the button click call the Java script function-->
+ <button type="button" onclick="temperatureConverter();">Convert!</button>
 </p>
+    <!--Have the output show as a conversion-->
 <p>Celcius: <span id="outputCelcius"></span></p>
 </th>
 </tr>
 <script>
 function temperatureConverter() {
+ <!--have the input be turned into a float variable-->
   valNum = parseFloat(document.getElementById("inputFahrenheit").value);
+ <!--have the output show the result of the conversion-->
   document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
 </script>
 
