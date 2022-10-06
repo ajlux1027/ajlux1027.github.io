@@ -12,7 +12,16 @@
  <h3>Fahrenheit to Celsius</h3><br />
   <p>
    <label> Fahrenheit </label>
+   <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+  oninput="temperatureConverter(this.value)"
+  onchange="temperatureConverter(this.value)">
   </p>
+  <p>Celsius: <span id="outputCelsius"></span></p>
+   <script> function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+}
+  </script>
 <a href= "#">Find the GCD</a><br />
 <a href="#">Compute sum of digits</a><br />
 <a href="#">Generate new string from input</a><br />
