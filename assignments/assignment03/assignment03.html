@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
  <head> 
+  <style>
+th{border: 1px solid black;}
+</style>
   <title>Alex's Assignment 03 Apps</title> 
   <!--Set the page head--> 
  </head> 
@@ -9,20 +12,25 @@
 <h1> Alex's Assignment 03 Apps</h1>
 <!--Make the apps able to be open-->
  <h2>Apps</h2>
- <h3>Temperature Converter</h3>
+ <h3> 3A) Temperature Converter</h3>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+<table style="width:100%">
+  <tr>
+    <th>
 <p>
   <label>Fahrenheit</label>
   <input id="inputFahrenheit" type="number" placeholder="Fahrenheit">
  <button type="button" onclick="temperatureConverter();">Click Me!</button>
 </p>
 <p>Celcius: <span id="outputCelcius"></span></p>
-
+</th>
+</tr>
 <script>
 function temperatureConverter() {
   valNum = parseFloat(document.getElementById("inputFahrenheit").value);
   document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
-}
 </script>
+
 <a href= "#">Find the GCD</a><br />
 <a href="#">Compute sum of digits</a><br />
 <a href="#">Generate new string from input</a><br />
