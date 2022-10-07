@@ -91,11 +91,15 @@ function temperatureConverter() {
     <th>
      <p>Type in your name: </p>
      <!--make input boxes to take input from the user-->
-     <input id="inputPrefix" type="text" placeholder="Ms.">
-     <input id="inputFName" type="text" placeholder="Jane" required>
-     <input id="inputLName" type="text" placeholder="Doe" required>
-     <input id="inputSuffix" type="text" placeholder="Jr.">
-     
+     <p>
+     <label for="prefix">Prefix:</label>
+  <input type="text" input id="prefix"><br><br>
+ <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"required><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" required><br><br>
+  <label for="prefix">Suffix:</label>
+  <input type="text" input id="suffix"><br><br>
      <button type="button" onclick="MakeString();">Present Name!</button>
       </p>
  
