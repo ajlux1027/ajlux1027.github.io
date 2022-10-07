@@ -78,6 +78,8 @@ function temperatureConverter() {
    <!--have the button click call the Java script function-->
  <button type="button" onclick="AddDigits();">Add!</button>
      </p>
+     
+      <p>Digit Total: <span id="total"></span></p>
    </th>
  </tr>
   </table>
@@ -87,8 +89,17 @@ function temperatureConverter() {
 <table style="width:100%">
   <tr>
     <th>
-     <p>Type in a number to find sum of digits: </p>
+     <p>Type in your name: </p>
      <!--make input boxes to take input from the user-->
+     <input id="inputPrefix" type="text" placeholder="Ms.">
+     <input id="inputFName" type="text" placeholder="Jane">
+     <input id="inputLName" type="text" placeholder="Doe">
+     <input id="inputSuffix" type="text" placeholder="Jr.">
+     
+     <button type="button" onclick="MakeString();">Present Name!</button>
+      </p>
+ 
+   <p>Name: <span id="name"></span></p>
      
    </th>
  </tr>
