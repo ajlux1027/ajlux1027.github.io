@@ -10,4 +10,3 @@ function GCDFinder() {
   }
 document.getElementById("output").innerHTML= Gcd;
   }
-}
