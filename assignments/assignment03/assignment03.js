@@ -1,8 +1,8 @@
 //The function for 3B
 function GCDFinder() {
-   var numOne = parseInt(document.getElementById("inputNumOne").value);
-   var numTwo = parseInt(document.getElementById("inputNumTwo").value);
-   var Gcd = 1;
+   let numOne = parseInt(document.getElementById("inputNumOne").value);
+   let numTwo = parseInt(document.getElementById("inputNumTwo").value);
+   let Gcd = 1;
   while(numTwo) {
     Gcd = numTwo;
     numTwo = numOne % numTwo;
@@ -13,7 +13,7 @@ document.getElementById("output").innerHTML= Gcd;
 
 //the function for 3C
 function AddDigits(){
-var value = parseInt(document.getElementById("inputNum").value);
+let value = parseInt(document.getElementById("inputNum").value);
     sum = 0;
 
 while (value) {
