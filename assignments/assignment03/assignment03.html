@@ -48,31 +48,24 @@ function temperatureConverter() {
     <th>
 <p>Type in two numbers to find the Greatest Common denominator of the two: </p>
      <!--make an input box to take the two numbers from the user-->
-  <input id="inputNumOne" type="number" placeholder="24">
-  <input id="inputNumTwo" type="number" placeholder="64">
+  <p> 
+   <label> Number 1: </label>
+     <input id="inputNumOne" type="number" placeholder="24">
+ <label> Number 2: </label>
+   <input id="inputNumTwo" type="number" placeholder="64">
 <!--have the button click call the Java script function-->
  <button type="button" onclick="GCDFinder();">Find GCD!</button>
+     </p>
 <p>
  <!--Have the output show-->
- <p>GCD: <span id="output"></span></p>
+ <p>
+  <label>GCD: </label>
+  <input id="output" disabled></p>
    </th>
  </tr>
      </table>
   
-  <script> //The function for 3B
-//The function for 3B
-function GCDFinder() {
-   var numOne = parseInt(document.getElementById("inputNumOne").value);
-   var numTwo = parseInt(document.getElementById("inputNumTwo").value);
-   var Gcd = 1;
-  while(numTwo) {
-    Gcd = numTwo;
-    numTwo = numOne % numTwo;
-    numOne = Gcd;
-  }
-document.getElementById("output").innerHTML= Gcd;
-  }
-</script>
+
 <h3> 3C) Compute Sum of Digits</h3>
 <h3> 3D) Make String From Input</h3>
 <h3> 3E) Tic-Tac-Toe</h3>
