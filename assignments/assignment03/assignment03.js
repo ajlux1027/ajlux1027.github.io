@@ -22,3 +22,16 @@ while (value) {
  }
 document.getElementById("total").innerHTML= sum;
 }
+
+//he function for 3D
+function MakeString(){
+var prefix = document.getElementById("inputPrefix").value;
+var Fname = document.getElementById("inputFName").value;
+var LName = document.getElementById("inputLName").value;
+var suffix = document.getElementById("inputSuffix").value;
+ var name;  
+   if(Fname == null || Lname == null){
+      document.getElementById("name").innerHTML = "Please enter First and Last Name";
+   } else if(prefix == null && suffix ==null){
+      name = Fname + LName;
+}
