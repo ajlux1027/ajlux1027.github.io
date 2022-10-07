@@ -41,8 +41,6 @@ function temperatureConverter() {
   document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
 </script>
  
- <!-- Link the Javascript link for the rest for the external JS-->
- <script src="https://ajlux1027.github.io/assignments/assignment03/assignment03.js"></script>
 <h3> 3B) GCD Finder</h3>
    <!--make a table around the GCD finder-->
 <table style="width:100%">
@@ -60,8 +58,25 @@ function temperatureConverter() {
    </th>
  </tr>
      </table>
+  
+  <script> //The function for 3B
+//The function for 3B
+function GCDFinder() {
+   var numOne = parseInt(document.getElementById("inputNumOne").value);
+   var numTwo = parseInt(document.getElementById("inputNumTwo").value);
+   var Gcd = 1;
+  while(numTwo) {
+    Gcd = numTwo;
+    numTwo = numOne % numTwo;
+    numOne = Gcd;
+  }
+document.getElementById("output").innerHTML= Gcd;
+  }
+</script>
 <h3> 3C) Compute Sum of Digits</h3>
 <h3> 3D) Make String From Input</h3>
 <h3> 3E) Tic-Tac-Toe</h3>
-   
+  
+    <!-- Link the Javascript link for the rest for the external JS-->
+ <script src="https://ajlux1027.github.io/assignments/assignment03/assignment03.js"></script>
    </body>
