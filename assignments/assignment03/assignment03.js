@@ -24,13 +24,10 @@ document.getElementById("total").innerHTML= sum;
 }
 
 function MakeString(){
-let name = document.getElementById("fname").value + " " + document.getElementById("lname").value;
-
-if(document.getElementById("fname").value == undefined || document.getElementById("lname").value == undefined){
-name = "please enter a first and last name";
-
-} else if (document.getElementById("prefix").value != undefined || document.getElementById("suffix").value != undefined){
-name = document.getElementById("prefix").value + ". " + document.getElementById("fname").value + " " + document.getElementById("lname").value;
+if (document.getElementById("prefix").value != undefined || document.getElementById("suffix").value != undefined){
+name = document.getElementById("prefix").value + ". " + document.getElementById("fname").value + " " + document.getElementById("lname").value + " " + document.getElementById("suffix").value;
+}else if(document.getElementById("fname").value == undefined || document.getElementById("lname").value == undefined){
+name = "error";
 }
 document.getElementById("name").innerHTML = name; 
 }
