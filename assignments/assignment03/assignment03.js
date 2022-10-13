@@ -239,7 +239,7 @@ function myfunc() {
     }
 }
 // Function to reset game
-function tic2() {
+function reset() {
     location.reload();
     document.getElementById('box1').value = '';
     document.getElementById("box2").value = '';
@@ -251,4 +251,120 @@ function tic2() {
     document.getElementById("box8").value = '';
     document.getElementById("box9").value = '';
 }
-
+let flag = 1;
+function tic2() {
+    if (flag == 1) {
+        document.getElementById("box1").value = "X";
+        document.getElementById("box1").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box1").value = "O";
+        document.getElementById("box1").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic3() {
+    if (flag == 1) {
+        document.getElementById("box2").value = "X";
+        document.getElementById("box2").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box2").value = "O";
+        document.getElementById("box2").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic4() {
+    if (flag == 1) {
+        document.getElementById("box3").value = "X";
+        document.getElementById("box3").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box3").value = "O";
+        document.getElementById("box3").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic5() {
+    if (flag == 1) {
+        document.getElementById("box4").value = "X";
+        document.getElementById("box4").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box4").value = "O";
+        document.getElementById("box4").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic6() {
+    if (flag == 1) {
+        document.getElementById("box5").value = "X";
+        document.getElementById("box5").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box5").value = "O";
+        document.getElementById("box5").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic7() {
+    if (flag == 1) {
+        document.getElementById("box6").value = "X";
+        document.getElementById("box6").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box6").value = "O";
+        document.getElementById("box6").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic8() {
+    if (flag == 1) {
+        document.getElementById("box7").value = "X";
+        document.getElementById("box7").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box7").value = "O";
+        document.getElementById("box7").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic9() {
+    if (flag == 1) {
+        document.getElementById("box8").value = "X";
+        document.getElementById("box8").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box8").value = "O";
+        document.getElementById("box8").disabled = true;
+        flag = 1;
+    }
+}
+ 
+function tic10() {
+    if (flag == 1) {
+        document.getElementById("b9").value = "X";
+        document.getElementById("b9").disabled = true;
+        flag = 0;
+    }
+    else {
+        document.getElementById("box9").value = "O";
+        document.getElementById("box9").disabled = true;
+        flag = 1;
+    }
+}
