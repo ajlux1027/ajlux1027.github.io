@@ -34,7 +34,8 @@ name = "error";
 document.getElementById("name").innerHTML = name; 
 }
 
-//make function for 3e
+//make function for 3E
+//Used the website for reference for some code changed some to fit better
 // Function called whenever user tab on any box
 function myfunc() {
     let box1 = document.getElementById("box1").value;
@@ -250,3 +251,4 @@ function tic2() {
     document.getElementById("box8").value = '';
     document.getElementById("box9").value = '';
 }
+
