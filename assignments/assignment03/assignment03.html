@@ -109,8 +109,64 @@ function temperatureConverter() {
    </th>
  </tr>
   </table>
-<h3> 3E) Tic-Tac-Toe</h3>
+
+  <h3> 3E) Tic-Tac-Toe</h3>
   <!-- Not finished yet-->
+  <div id="tictac">
+   <!--make a table around the app-->
+<table style="width:100%">
+  <tr>
+    <th>
+     <!-- Game Instructions -->
+        <p id="instructions">Game starts by just Tapping on 
+            box<br><br>First Player starts as 
+            <b>Player 1</b><br>And<br>Second 
+            Player as <b>Player 0</b></p>
+             <br><br>
+        <!-- 3*3 grid of Boxes -->
+        <input type="text" id="box1" onclick=
+            "tic2(); tic();" readonly>
+   
+        <input type="text" id="box2" onclick=
+            "tic3(); tic();" readonly>
+   
+        <input type="text" id="box3" onclick=
+            "tic4(); tic();" readonly>
+        <br><br>
+   
+        <input type="text" id="box4" onclick=
+            "tic5(); tic();" readonly>
+               
+        <input type="text" id="b5" onclick=
+            "tic6(); tic();" readonly>
+   
+        <input type="text" id="b6" onclick=
+            "tic7(); tic();" readonly>
+        <br><br>
+   
+        <input type="text" id="b7" onclick=
+            "tic8(); tic();" readonly>
+   
+        <input type="text" id="b8" onclick=
+            "tic9();tic();" readonly>
+   
+        <input type="text" id="b9" onclick=
+            "tic10();tic();" readonly>
+   
+        <!-- Grid end here  -->
+        <br><br><br>
+        <!-- Button to reset game -->
+        <button id="but" onclick="reset()">
+            Reset
+        </button>
+   
+        <br><br>
+        <!-- Space to show player turn -->
+     <p id="print"></p>
+    </div>
+   </th>
+ </tr>
+   </table>
   <h3> 3F) The Art Store </h3>
    <!-- Not finished yet-->
   <!-- Link the Javascript link for the rest for the external JS-->
