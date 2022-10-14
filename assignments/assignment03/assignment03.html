@@ -17,7 +17,8 @@ th,tr{border: 1px solid black; }
  <h2>Apps</h2>
    
 <h3> 3A) Temperature Converter</h3>  
- <!--make a table around the temp converter-->
+ <form>
+  <!--make a table around the temp converter-->
 <table style="width:100%">
   <tr>
     <th>
@@ -34,6 +35,7 @@ th,tr{border: 1px solid black; }
 </th>
 </tr>
   </table>
+  </form>
 <script>
 function temperatureConverter() {
  //have the input be turned into a float variable
@@ -44,7 +46,8 @@ function temperatureConverter() {
 </script>
  
 <h3> 3B) GCD Finder</h3>
-   <!--make a table around the GCD finder-->
+  <form>
+  <!--make a table around the GCD finder-->
 <table style="width:100%">
   <tr>
     <th>
@@ -64,9 +67,10 @@ function temperatureConverter() {
    </th>
  </tr>
      </table>
-  
+  </form>
 
 <h3> 3C) Compute Sum of Digits</h3>
+ <form>
   <!--make a table around the app-->
 <table style="width:100%">
   <tr>
@@ -84,8 +88,9 @@ function temperatureConverter() {
    </th>
  </tr>
   </table>
-  
+  </form>
 <h3> 3D) Make String From Input</h3>
+  <form>
   <!--make a table around the app-->
 <table style="width:100%">
   <tr>
@@ -94,22 +99,32 @@ function temperatureConverter() {
      <!--make input boxes to take input from the user-->
      <p>
      <label for="prefix">Prefix:</label>
-  <input type="text" input id="prefix"><br><br>
+      <select id="Prefix">
+            <option value="none">None</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Dr.">Dr.</option>
+          </select><br><br>
  <label for="fname">First name:</label>
   <input type="text" id="fname" name="fname"required><br><br>
   <label for="lname">Last name:</label>
   <input type="text" id="lname" name="lname" required><br><br>
   <label for="prefix">Suffix:</label>
-  <input type="text" input id="suffix"><br><br>
+  <select id="suffix">
+            <option value="none">None</option>
+            <option value="Jr.">Jr.</option>
+            <option value="Sr.">Sr.</option>
+            <option value="II">II</option>
+          </select>><br><br>
      <button type="button" onclick="MakeString();">Present Name!</button>
       </p>
  
    <p>Name: <span id="name"></span></p>
-     
+
    </th>
  </tr>
   </table>
-
+ </form>
   <h3> 3E) Tic-Tac-Toe</h3>
   <!-- Not finished yet-->
   <div id="tictac">
