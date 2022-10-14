@@ -26,14 +26,25 @@ document.getElementById("total").innerHTML= sum;
 
 //make function for 3D
 function MakeString(){
-if (document.getElementById("prefix").value != undefined || document.getElementById("suffix").value != undefined){
-name = document.getElementById("prefix").value + ". " + document.getElementById("fname").value + " " + document.getElementById("lname").value + " " + document.getElementById("suffix").value;
-}else if(document.getElementById("fname").value == undefined || document.getElementById("lname").value == undefined){
-name = "error";
+   let prefix = document.getElementById("prefix").value
+   let fName = document.getElementById("fname").value
+   let lName = document.getElementById("lname").value
+   let suffix =  document.getElementById("suffix").value
+if (prefix = "none"){
+   prefix = "";
+} 
+   if(suffix = "none"{
+      suffix = "";
+      }
+if (fName == "" || lName ==""){
+document.getElementById("name").value = "Please fill out required items";
+        document.getElementById("fname").style.borderColor = "red";
+        document.getElementById("lname").style.borderColor = "red";
+} 
+if(fName > 0 && lName > 0){
+document.getElementById("name").value = prefix + " " + fName + " " + lName + " " + suffix; 
 }
-document.getElementById("name").innerHTML = name; 
 }
-
 //make function for 3E
 //Used the website for reference for some code changed some to fit better: https://www.geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/
 // Function called whenever user tab on any box
