@@ -15,10 +15,9 @@ th,tr{border: 1px solid black; }
 <h1> Alex's Assignment 03 Apps</h1>
 <!--Make the apps able to be open-->
  <h2>Apps</h2>
-   <main>
+   
 <h3> 3A) Temperature Converter</h3>  
- <form>
-  <!--make a table around the temp converter-->
+ <!--make a table around the temp converter-->
 <table style="width:100%">
   <tr>
     <th>
@@ -31,11 +30,10 @@ th,tr{border: 1px solid black; }
  <button type="button" onclick="temperatureConverter();">Convert!</button>
 </p>
     <!--Have the output show as a conversion-->
-     <p>Celcius: <span id="outputCelcius"></span></p>
+<p>Celcius: <span id="outputCelcius"></span></p>
 </th>
 </tr>
   </table>
-  </form>
 <script>
 function temperatureConverter() {
  //have the input be turned into a float variable
@@ -46,8 +44,7 @@ function temperatureConverter() {
 </script>
  
 <h3> 3B) GCD Finder</h3>
-  <form>
-  <!--make a table around the GCD finder-->
+   <!--make a table around the GCD finder-->
 <table style="width:100%">
   <tr>
     <th>
@@ -63,14 +60,13 @@ function temperatureConverter() {
      </p>
 <p>
  <!--Have the output show-->
-     <p>GCD: <span id="output"></span></p>
+    <p>GCD: <span id="output"></span></p>
    </th>
  </tr>
      </table>
-  </form>
+  
 
 <h3> 3C) Compute Sum of Digits</h3>
- <form>
   <!--make a table around the app-->
 <table style="width:100%">
   <tr>
@@ -83,14 +79,13 @@ function temperatureConverter() {
    <!--have the button click call the Java script function-->
  <button type="button" onclick="AddDigits();">Add!</button>
      </p>
-     <p>Digit Total: <span id="total"></span></p>
-     <p><label>Digit Total: </label><input type="text" id="total" disabled></p>
+     
+      <p>Digit Total: <span id="total"></span></p>
    </th>
  </tr>
   </table>
-  </form>
+  
 <h3> 3D) Make String From Input</h3>
-  <form>
   <!--make a table around the app-->
 <table style="width:100%">
   <tr>
@@ -98,69 +93,84 @@ function temperatureConverter() {
      <p>Type in your name: </p>
      <!--make input boxes to take input from the user-->
      <p>
-     <label for="Prefix">Prefix:</label>
-      <select id="Prefix">
-            <option value="none">None</option>
-            <option value="Mr.">Mr.</option>
-            <option value="Mrs.">Mrs.</option>
-            <option value="Dr.">Dr.</option>
-          </select><br><br>
+     <label for="prefix">Prefix:</label>
+  <input type="text" input id="prefix"><br><br>
  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" required><br><br>
+  <input type="text" id="fname" name="fname"required><br><br>
   <label for="lname">Last name:</label>
   <input type="text" id="lname" name="lname" required><br><br>
-  <label for="suffix">Suffix: </label>
-  <select id="suffix">
-            <option value="none">None</option>
-            <option value="Jr.">Jr.</option>
-            <option value="Sr.">Sr.</option>
-            <option value="II">II</option>
-          </select><br><br>
-     <input class="submit" type="button" name = "Present Name!" value = "Present Name" onclick="MakeString();">
+  <label for="prefix">Suffix:</label>
+  <input type="text" input id="suffix"><br><br>
+     <button type="button" onclick="MakeString();">Present Name!</button>
       </p>
- <p>name: <span id="Fullname"></span></p>
-
+ 
+   <p>Name: <span id="name"></span></p>
+     
    </th>
  </tr>
   </table>
- </form>
-    
-    
+
   <h3> 3E) Tic-Tac-Toe</h3>
-  <form>
+  <!-- Not finished yet-->
+  <div id="tictac">
    <!--make a table around the app-->
 <table style="width:100%">
-  <div id ="tictac">
- <tr>
+  <tr>
     <th>
      <!-- Game Instructions -->
         <p id="instructions">Game starts by just Tapping on 
             box<br><br>First Player starts as 
             <b>Player X</b><br>And<br>Second 
             Player as <b>Player O</b></p>
-     
+             <br><br>
         <!-- 3*3 grid of Boxes -->
-        <div class = "tic" id="box1" ></div>
-        <div class = "tic" id="box2" ></div>
-        <div class = "tic" id="box3" ></div>
-       <div class = "tic" id="box4" ></div>
-     <div class = "tic" id="box5" ></div>
-     <div class = "tic" id="box6" ></div>
-    <div class = "tic" id="box7" ></div>
-     <div class = "tic" id="box8" ></div>
-     <div class = "tic" id="box9" ></div>
+        <input type="text" id="box1" onclick=
+            "tic2(); tic();" readonly>
+   
+        <input type="text" id="box2" onclick=
+            "tic3(); tic();" readonly>
+   
+        <input type="text" id="box3" onclick=
+            "tic4(); tic();" readonly>
+        <br><br>
+   
+        <input type="text" id="box4" onclick=
+            "tic5(); tic();" readonly>
+               
+        <input type="text" id="b5" onclick=
+            "tic6(); tic();" readonly>
+   
+        <input type="text" id="b6" onclick=
+            "tic7(); tic();" readonly>
+        <br><br>
+   
+        <input type="text" id="b7" onclick=
+            "tic8(); tic();" readonly>
+   
+        <input type="text" id="b8" onclick=
+            "tic9();tic();" readonly>
+   
+        <input type="text" id="b9" onclick=
+            "tic10();tic();" readonly>
+   
         <!-- Grid end here  -->
-     </div>
+        <br><br><br>
         <!-- Button to reset game -->
-        <button id="but" onclick="reset()">Reset</button>
+        <button id="but" onclick="reset()">
+            Reset
+        </button>
+   
+        <br><br>
+        <!-- Space to show player turn -->
+     <p id="print"></p>
+    </div>
    </th>
  </tr>
    </table>
-  </form>
   <h3> 3F) The Art Store </h3>
    <!-- Not finished yet-->
- </main>
   <!-- Link the Javascript link for the rest for the external JS-->
-<script src=https://ajlux1027.github.io/assignments/assignment03/assignment03.js></script>
+<script src=https://ajlux1027.github.io/assignments/assignment03/assignment03.js>
+</script>
    </body>
 </html>
