@@ -33,15 +33,15 @@ function MakeString(){
 if (prefix = "none"){
    prefix = "";
 } 
-   if(suffix = "none"{
+ if(suffix = "none"{
       suffix = "";
       }
-if (fName < 0 || lName < 0){
+if (fName.length =< 0 || lName.lenth =< 0){
    document.getElementById("Completename").value = "Please fill out required items";
         document.getElementById("fname").style.borderColor = "red";
         document.getElementById("lname").style.borderColor = "red";
 } 
-if(fName > 0 && lName > 0){
+if(fName.length > 0 && lName.length > 0){
 document.getElementById("Completename").value = prefix + " " + fName + " " + lName + " " + suffix; 
 }
 }
