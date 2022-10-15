@@ -8,7 +8,7 @@ function GCDFinder() {
     numTwo = numOne % numTwo;
     numOne = Gcd;
   }
-document.getElementById("output").value= Gcd;
+document.getElementById("output").innerHTML= Gcd;
   }
 
 //the function for 3C
@@ -20,7 +20,7 @@ while (value) {
     sum += value % 10;
     value = Math.floor(value / 10);
  }
-document.getElementById("total").value= sum;
+document.getElementById("total").innerHTML= sum;
 }
 
 
@@ -42,12 +42,12 @@ function MakeString(){
     else title += " ";
 
     if(first.length == 0 || last.length == 0) {
-        document.getElementById("Completename").value = "Please fill out required items";
+        document.getElementById("Completename").innerHTML = "Please fill out required items";
         document.getElementById("fname").style.borderColor = "red";
         document.getElementById("lname").style.borderColor = "red";
     }
     else {
-        document.getElementById("fullName").value = title + first + last + suffix;
+        document.getElementById("fullName").innerHTML = prefix + fName + lName + suffix;
     }
     
 }
