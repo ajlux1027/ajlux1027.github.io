@@ -31,7 +31,7 @@ th,tr{border: 1px solid black; }
  <button type="button" onclick="temperatureConverter();">Convert!</button>
 </p>
     <!--Have the output show as a conversion-->
-     <p> <label>Celcius: </label> <input type="text" id="outputCelcius" disabled></p>
+     <p>Celcius: <span id="outputCelcius"></span></p>
 </th>
 </tr>
   </table>
@@ -41,7 +41,7 @@ function temperatureConverter() {
  //have the input be turned into a float variable
   valNum = parseFloat(document.getElementById("inputFahrenheit").value);
  //have the output show the result of the conversion-
-  document.getElementById("outputCelcius").value=(valNum-32)/1.8;
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
 }
 </script>
  
@@ -63,7 +63,7 @@ function temperatureConverter() {
      </p>
 <p>
  <!--Have the output show-->
-     <p><label>GCD: </label> <input type="text" id="output" disabled></p>
+     <p>GCD: <span id="output"></span></p>
    </th>
  </tr>
      </table>
@@ -83,7 +83,7 @@ function temperatureConverter() {
    <!--have the button click call the Java script function-->
  <button type="button" onclick="AddDigits();">Add!</button>
      </p>
-     
+     <p>Digit Total: <span id="total"></span></p>
      <p><label>Digit Total: </label><input type="text" id="total" disabled></p>
    </th>
  </tr>
@@ -118,8 +118,7 @@ function temperatureConverter() {
           </select><br><br>
      <input class="submit" type="button" name = "Present Name!" value = "Present Name" onclick="MakeString();">
       </p>
- 
-     <p> <label> Name: </label><input type="text" id="Completename" disabled></p>
+ <p>name: <span id="Fullname"></span></p>
 
    </th>
  </tr>
