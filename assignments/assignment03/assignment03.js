@@ -36,7 +36,7 @@ if (prefix = "none"){
  if(suffix = "none"{
       suffix = "";
       }
-if (fName.length =< 0 || lName.lenth =< 0){
+if (fName.length == 0 || lName.lenth == 0){
    document.getElementById("Completename").value = "Please fill out required items";
         document.getElementById("fname").style.borderColor = "red";
         document.getElementById("lname").style.borderColor = "red";
