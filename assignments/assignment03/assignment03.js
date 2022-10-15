@@ -37,39 +37,46 @@ document.getElementById("name").innerHTML = name;
 //make function for 3e
 //make variables for the turn and the boxes
 let turn = 0;
-let boxes = document.getElementsByClassName("ticBox");
-// Function called whenever user tab on any box
+var boxes = document.getElementsByClassName("ticBox");
 
-//Listen for boxes
-addGlobalEventListener("click", ".ticBox", e => {ticTac(e.target)})
+//Listen for boxes to be clicked
+addGlobalEventListener("click", ".ticBox", e => {
+    ticTac(e.target)
+  })
 
-//let User action be evaluated
+
+//User action evaluated, followed by the bot on a successful move.
 function ticTac(userSelection) {
     if(winState())
         return;
-    console.log("it is turn " + turn);
+    console.log("turn  is " + turn);
     //User Moves
-    let character = 'X';
+    let xo = 'X';
     let input = 0;
     if(turn % 2 == 0) {	//Checks if turn count is even or odd for user
-        character = 'X';
-       for(i = 0;i < 9;i++) {
+        xo = 'X';
+        			
+		 
+
+        for(i = 0;i < 9;i++) {
             console.log(boxes[i]);
             console.log(userSelection)
             if(boxes[i] == userSelection)
                 break;
             input++;
         }
-       console.log("You've chosen box " + input)
+
+        console.log("input =" + input)
         if(input >= 0 && input <= 8) {
-           //find if the spot is already taken
-            if (boxes[input].innerText == 'X' || boxes[input].innerText == 'O') 
+            if (boxes[input].innerText == 'X' || boxes[input].innerText == 'O') // decides if spot is already taken
                  turn--;
             else {
-                boxes[input].innerText = character;
+                boxes[input].innerText = xo;		// If spot is not taken, X/O placed in position
                 boxes[input].style.backgroundColor = "antiquewhite";
             }
-           //userSelection.innerText = "X"
+                
+           
+            //userSelection.innerText = "X"
             console.log(userSelection)
         }
         turn++;
@@ -260,8 +267,3 @@ function addGlobalEventListener(type, selector, callback) {
       if (e.target.matches(selector)) callback(e)
     })
   }
-
-
-
-
-}
