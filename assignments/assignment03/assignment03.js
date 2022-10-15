@@ -36,6 +36,8 @@ document.getElementById("name").innerHTML = name;
 
 //make function for 3e
 //make variables for the turn and the boxes
+
+//Heavily influenced by Logan's example in class
 let turn = 0;
 var boxes = document.getElementsByClassName("ticBox");
 
