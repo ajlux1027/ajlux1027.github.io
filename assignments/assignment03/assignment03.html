@@ -112,7 +112,6 @@ function temperatureConverter() {
 
   <h3> 3E) Tic-Tac-Toe</h3>
   <!-- Not finished yet-->
-  <div id="tictac">
    <!--make a table around the app-->
 <table style="width:100%">
   <tr>
@@ -123,46 +122,19 @@ function temperatureConverter() {
             <b>Player X</b><br>And<br>Second 
             Player as <b>Player O</b></p>
              <br><br>
-        <!-- 3*3 grid of Boxes -->
-        <input type="text" id="box1" onclick=
-            "tic2(); tic();" readonly>
-   
-        <input type="text" id="box2" onclick=
-            "tic3(); tic();" readonly>
-   
-        <input type="text" id="box3" onclick=
-            "tic4(); tic();" readonly>
-        <br><br>
-   
-        <input type="text" id="box4" onclick=
-            "tic5(); tic();" readonly>
-               
-        <input type="text" id="b5" onclick=
-            "tic6(); tic();" readonly>
-   
-        <input type="text" id="b6" onclick=
-            "tic7(); tic();" readonly>
-        <br><br>
-   
-        <input type="text" id="b7" onclick=
-            "tic8(); tic();" readonly>
-   
-        <input type="text" id="b8" onclick=
-            "tic9();tic();" readonly>
-   
-        <input type="text" id="b9" onclick=
-            "tic10();tic();" readonly>
-   
-        <!-- Grid end here  -->
-        <br><br><br>
-        <!-- Button to reset game -->
-        <button id="but" onclick="reset()">
-            Reset
-        </button>
-   
-        <br><br>
-        <!-- Space to show player turn -->
-     <p id="print"></p>
+           <div id="ticTac">
+        <h2> Tic Tac Toe!</h2>
+        <h3 id="result">...</h3>
+        <div class = "ticBox" id="box1"></div>
+        <div class = "ticBox" id="box2"></div>
+        <div class = "ticBox" id="box3"></div>
+        <div class = "ticBox" id="box4"></div>
+        <div class = "ticBox" id="box5"></div>
+        <div class = "ticBox" id="box6"></div>
+        <div class = "ticBox" id="box7"></div>
+        <div class = "ticBox" id="box8"></div>
+        <div class = "ticBox" id="box9"></div>
+    </div>
     </div>
    </th>
  </tr>
