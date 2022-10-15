@@ -1,1 +1,31 @@
+#ticTac {
+    display: grid;
+    grid-template-rows: 40px 50px repeat(3, 80px);
+    grid-template-columns: repeat(3, 80px);
+}
 
+#ticTac h2 {
+    text-align: center;
+    grid-row: 1;
+    grid-column: span 3;
+}
+#result {
+    text-align: center;
+    grid-row-start: 2;
+    grid-column: span 3;
+
+}
+
+.tic {
+    width: 90%;
+    height: 90%;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 5px;
+    float: left;
+    font-size: 60px;
+    text-align: center;
+    color: red;
+    cursor: pointer;
+}
