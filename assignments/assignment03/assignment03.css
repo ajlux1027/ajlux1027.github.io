@@ -1,47 +1,5 @@
 body {
     font: 90% Arial, Helvetica, sans-serif;
-    background-color: #ebebe8;
-    margin: 20px; }
-header {
-    padding: 40px 0;
-    border-bottom: 2px solid black;
-
-}
-header img {
-    float: left;
-}
-header h1 {
-    font-size: 400%;
-    text-align: center;
-    font-family: "Georgia", 'Headings', Arial, Helvetica, serif;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-}
-header h3 {
-    font-size: 125%;
-    text-align: center;
-}
-
-form {
-    display: grid;
-    grid-template-columns: 10vw 40vw;
-    
-}
-
-label {
-    grid-column: 1/2;
-    min-width: 10em;
-}
-
-input, select {
-    grid-column: 2/3;
-    margin-left: 1em;
-    margin-bottom: .5em;
-}
-input:focus {
-        border: 2px solid navy; }
-.submit {
-    width: 50%;
-}
 
 #tac {
     display: grid;
