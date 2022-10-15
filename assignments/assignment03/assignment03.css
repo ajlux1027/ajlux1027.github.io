@@ -1,13 +1,12 @@
 body {
     font: 90% Arial, Helvetica, sans-serif;
-
-#tac {
+#ticTac {
     display: grid;
     grid-template-rows: 40px 50px repeat(3, 80px);
     grid-template-columns: repeat(3, 80px);
 }
 
-#tac h2 {
+#ticTac h2 {
     text-align: center;
     grid-row: 1;
     grid-column: span 3;
@@ -19,7 +18,7 @@ body {
 
 }
 
-.tic {
+.ticBox {
     width: 90%;
     height: 90%;
     background-color: grey;
@@ -33,6 +32,6 @@ body {
     cursor: pointer;
 }
 
-.tic:hover {
+.ticBox:hover {
     background-color: antiquewhite;
 }
