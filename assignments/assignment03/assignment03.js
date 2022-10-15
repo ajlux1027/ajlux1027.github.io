@@ -8,7 +8,7 @@ function GCDFinder() {
     numTwo = numOne % numTwo;
     numOne = Gcd;
   }
-document.getElementById("output").innerHTML= Gcd;
+document.getElementById("output").value= Gcd;
   }
 
 //the function for 3C
@@ -20,7 +20,7 @@ while (value) {
     sum += value % 10;
     value = Math.floor(value / 10);
  }
-document.getElementById("total").innerHTML= sum;
+document.getElementById("total").value= sum;
 }
 
 
