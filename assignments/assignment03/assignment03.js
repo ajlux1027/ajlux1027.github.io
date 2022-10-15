@@ -37,12 +37,12 @@ if (prefix = "none"){
       suffix = "";
       }
 if (fName < 0 || lName < 0){
-   document.getElementById("name").value = "Please fill out required items";
+   document.getElementById("Completename").value = "Please fill out required items";
         document.getElementById("fname").style.borderColor = "red";
         document.getElementById("lname").style.borderColor = "red";
 } 
 if(fName > 0 && lName > 0){
-document.getElementById("name").value = prefix + " " + fName + " " + lName + " " + suffix; 
+document.getElementById("Completename").value = prefix + " " + fName + " " + lName + " " + suffix; 
 }
 }
 
