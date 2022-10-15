@@ -2,7 +2,6 @@ body {
     font: 90% Arial, Helvetica, sans-serif;
 }
 #ticTac {
-    margin-right: 10px;
     display: grid;
     grid-template-rows: 40px 50px repeat(3, 80px);
     grid-template-columns: repeat(3, 80px);
