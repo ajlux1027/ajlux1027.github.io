@@ -30,20 +30,26 @@ function MakeString(){
    let fName = document.getElementById("fname").value
    let lName = document.getElementById("lname").value
    let suffix =  document.getElementById("suffix").value
-if (prefix = "none"){
-   prefix = "";
-} 
- if(suffix = "none"{
-      suffix = "";
-      }
-if (fName.length == 0 || lName.lenth == 0){
-   document.getElementById("Completename").value = "Please fill out required items";
+    if(suffix == "none")
+        suffix = "";
+
+    if(first.length > 0)
+        first += " ";
+    if(last.length > 0)
+        last += " ";
+    if(title == "none")
+        title = "";
+    else title += " ";
+
+    if(first.length == 0 || last.length == 0) {
+        document.getElementById("Completename").value = "Please fill out required items";
         document.getElementById("fname").style.borderColor = "red";
         document.getElementById("lname").style.borderColor = "red";
-} 
-if(fName.length > 0 && lName.length > 0){
-document.getElementById("Completename").value = prefix + " " + fName + " " + lName + " " + suffix; 
-}
+    }
+    else {
+        document.getElementById("fullName").value = title + first + last + suffix;
+    }
+    
 }
 
 
