@@ -1,5 +1,6 @@
 body {
     font: 90% Arial, Helvetica, sans-serif;
+}
 #ticTac {
     display: grid;
     grid-template-rows: 40px 50px repeat(3, 80px);
