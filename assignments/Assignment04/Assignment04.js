@@ -56,3 +56,33 @@ document
 document
   .getElementById("loadnextcountry")
   .addEventListener("click", loadNextCountry);
+
+//make a variable to keep track of which country we are on
+let country = 0
+let json
+function loadJson() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange 
+    = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          json = JSON.parse(this.responseText);
+        }
+      };
+  xhttp.open("GET", "https://api.covid19api.com/summary", true);
+  xhttp.send();
+}
+
+function loadPriorCountry () {
+  country--
+  if (country < 0) 
+    country = 0
+  document.getElementById("Country").innerHTML = json.Countries[country].Country
+            + json.Countries[country].TotalDeaths
+}
+
+function loadNextCountry () {
+  country++
+  if (country > json.Countries.length - 1) 
+    country = json.Countries.length - 1
+  document.getElementById("Country").innerHTML = json.Countries[country].Country
+}
