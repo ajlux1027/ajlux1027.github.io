@@ -35,6 +35,11 @@ const Arr3 = [
     lastName:"Jones", 
     title: "Mrs. ",
     suffix: "Sr. ",
-    age:65},
-  
-]
+    age:65}
+];
+//make an array of years
+const years = [-100, 0, 100, 1900, 1904, 2000];
+//make two seperate arrays of numbers
+const r = [1, 4, 5, 7];
+const distances = [2, 4, 6, 8, 10];
+
