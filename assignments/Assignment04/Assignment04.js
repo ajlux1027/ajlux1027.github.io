@@ -65,13 +65,14 @@ function loadJson() {
   xhttp.onreadystatechange 
     = function() {
         if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("coviddata").innerHTML 
+            = "JSON data loaded.";
           json = JSON.parse(this.responseText);
         }
       };
   xhttp.open("GET", "https://api.covid19api.com/summary", true);
   xhttp.send();
 }
-
 function loadPriorCountry () {
   country--
   if (country < 0) 
