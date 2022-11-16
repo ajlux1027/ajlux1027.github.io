@@ -57,7 +57,6 @@ document
   .getElementById("loadnextcountry")
   .addEventListener("click", loadNextCountry);
 
-//make a variable to keep track of which country we are on
 let country = 0
 let json
 function loadJson() {
