@@ -43,3 +43,16 @@ const years = [-100, 0, 100, 1900, 1904, 2000];
 const r = [1, 4, 5, 7];
 const distances = [2, 4, 6, 8, 10];
 
+
+
+//API Caller
+//Make event listeners for the buttons
+document
+  .getElementById("loadjson")
+  .addEventListener("click", loadJson);
+document
+  .getElementById("loadpriorcountry")
+  .addEventListener("click", loadPriorCountry);
+document
+  .getElementById("loadnextcountry")
+  .addEventListener("click", loadNextCountry);
