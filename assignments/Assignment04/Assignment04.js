@@ -141,10 +141,10 @@ function loadnextcountry () {
             = json.Countries[country].TotalConfirmed
   
    document.getElementById("NewDeath").value 
-            = json.Countries[country].NewDeath
+            = json.Countries[country].NewDeaths
   
    document.getElementById("TotalDeath").value 
-            = json.Countries[country].TotalDeath
+            = json.Countries[country].TotalDeaths
   
    document.getElementById("NewReco").value 
             = json.Countries[country].NewRecovered
