@@ -86,19 +86,15 @@ function loadpriorcountry () {
   country--
   if (country < 0) 
     country = 0
-  document.getElementById("coviddata").innerHTML 
-            = json.Countries[country].Country
-            + ", " 
-            + json.Countries[country].TotalDeaths
+  document.getElementById("ID").innerHTML 
+            = json.Countries[country].Id
 }
 
 function loadnextcountry () {
   country++
   if (country > json.Countries.length - 1) 
     country = json.Countries.length - 1
-  document.getElementById("coviddata").innerHTML 
-            = json.Countries[country].Country
-            + ", " 
-            + json.Countries[country].TotalDeaths
+  document.getElementById("ID").innerHTML 
+            = json.Countries[country].Id
 }
 
