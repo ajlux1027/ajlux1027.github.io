@@ -86,15 +86,15 @@ function loadpriorcountry () {
   country--
   if (country < 0) 
     country = 0
-  document.getElementById("ID").innerHTML 
-            = json.Countries[country].Id
+  document.getElementById("Country").innerHTML 
+            = json.Countries[country].Country
 }
 
 function loadnextcountry () {
   country++
   if (country > json.Countries.length - 1) 
     country = json.Countries.length - 1
-  document.getElementById("ID").innerHTML 
-            = json.Countries[country].Id
+  document.getElementById("Country").innerHTML 
+            = json.Countries[country].Country
 }
 
