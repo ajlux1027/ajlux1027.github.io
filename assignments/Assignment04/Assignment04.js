@@ -49,7 +49,22 @@ const distances = [2, 4, 6, 8, 10];
 //Pythagorean Theorm arrow function
 let Pythagorean =(Sidea, Sideb) =>Math.sqrt(((Math.pow(Sidea,2)) + (Math.pow(Sideb,2))));
 
+//Roots of quadratic equation arrow function
+let quads = (a, b, c) => placeholder;
+
+//Volume of a sphere given radius arrow function
+let SphereVolume = (radius) =>
+//Arctan of “pi” plus another value (in radians) arrow function
+
+//The sum of a number and its square, i.e. n + n * n arrow function
+
+// isleapyear(year) returns true if year is a leapyear arrow function
+
+//timeFallen(distance) returns time in seconds that an object takes to fall a given distance (at sea level on planet Earth) arrow function
+
 //
+
+
 
 
 
@@ -68,6 +83,8 @@ document
 
 let country = 0
 let json
+
+//make a funtion to load the JSON
 function loadJson() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange 
@@ -82,6 +99,7 @@ function loadJson() {
   xhttp.send();
 }
 
+//make a function to load the previous country and its statistics
 function loadpriorcountry () {
   country--
   if (country < 0) 
@@ -119,6 +137,7 @@ function loadpriorcountry () {
             = json.Countries[country].Date
 }
 
+//make function to load next country and its statistics
 function loadnextcountry () {
   country++
   if (country > json.Countries.length - 1) 
