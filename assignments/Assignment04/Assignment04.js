@@ -92,7 +92,7 @@ function loadpriorcountry () {
             = json.Countries[country].Country
   
    document.getElementById("CountryID").value 
-            = json.Countries[country].CountryID
+            = json.Countries[country].CountryCode
    
   document.getElementById("Slug").value 
             = json.Countries[country].Slug
@@ -129,7 +129,7 @@ function loadnextcountry () {
             = json.Countries[country].Country
   
    document.getElementById("CountryID").value 
-            = json.Countries[country].CountryID
+            = json.Countries[country].CountryCode
    
   document.getElementById("Slug").value 
             = json.Countries[country].Slug
