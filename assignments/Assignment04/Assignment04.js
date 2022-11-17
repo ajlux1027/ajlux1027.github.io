@@ -86,15 +86,73 @@ function loadpriorcountry () {
   country--
   if (country < 0) 
     country = 0
-  document.getElementById("Country").innerHTML 
+  document.getElementById("ID").value 
+            = json.Countries[country].ID
+   document.getElementById("Country").value 
             = json.Countries[country].Country
+  
+   document.getElementById("CountryID").value 
+            = json.Countries[country].CountryID
+   
+  document.getElementById("Slug").value 
+            = json.Countries[country].Slug
+  
+  document.getElementById("NewConfirmed").value 
+            = json.Countries[country].NewConfirmed
+  
+   document.getElementById("TotalConfirmed").value 
+            = json.Countries[country].TotalConfirmed
+  
+   document.getElementById("NewDeath").value 
+            = json.Countries[country].NewDeath
+  
+   document.getElementById("TotalDeath").value 
+            = json.Countries[country].TotalDeath
+  
+   document.getElementById("NewReco").value 
+            = json.Countries[country].NewRecovered
+  
+   document.getElementById("TotalReco").value 
+            = json.Countries[country].TotalRecovered
+  
+   document.getElementById("Date").value 
+            = json.Countries[country].Date
 }
 
 function loadnextcountry () {
   country++
   if (country > json.Countries.length - 1) 
     country = json.Countries.length - 1
-  document.getElementById("Country").innerHTML 
+  document.getElementById("ID").value 
+            = json.Countries[country].ID
+   document.getElementById("Country").value 
             = json.Countries[country].Country
+  
+   document.getElementById("CountryID").value 
+            = json.Countries[country].CountryID
+   
+  document.getElementById("Slug").value 
+            = json.Countries[country].Slug
+  
+  document.getElementById("NewConfirmed").value 
+            = json.Countries[country].NewConfirmed
+  
+   document.getElementById("TotalConfirmed").value 
+            = json.Countries[country].TotalConfirmed
+  
+   document.getElementById("NewDeath").value 
+            = json.Countries[country].NewDeath
+  
+   document.getElementById("TotalDeath").value 
+            = json.Countries[country].TotalDeath
+  
+   document.getElementById("NewReco").value 
+            = json.Countries[country].NewRecovered
+  
+   document.getElementById("TotalReco").value 
+            = json.Countries[country].TotalRecovered
+  
+   document.getElementById("Date").value 
+            = json.Countries[country].Date
 }
 
