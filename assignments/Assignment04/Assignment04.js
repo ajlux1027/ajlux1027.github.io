@@ -68,6 +68,8 @@ let quads = (a, b, c) => {
 }
   }
 //Volume of a sphere given radius arrow function
+let SphereVolume = (radius) => 
+((4/3) * Math.PI * (Math.pow(radius, 3)))
 
 //Arctan of “pi” plus another value (in radians) arrow function
 
