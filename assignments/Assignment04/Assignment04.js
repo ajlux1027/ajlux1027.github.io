@@ -95,9 +95,16 @@ let fallTime = (distance) => {
 }
 
 
-//
+//event listener for button press to get sum of the leap years
+document
+  .getElementByName("LeapButton")
+  .addEventListener("click", SumOfLeaps);
 
-
+function SumOfLeaps(years){
+  let sum = 0
+  
+  sum += (years.map(
+}
 
 
 
