@@ -71,13 +71,29 @@ let quads = (a, b, c) => {
 let SphereVolume = (radius) => 
 ((4/3) * Math.PI * (Math.pow(radius, 3)))
 
+//Degrees Kelvin, given degrees Fahrenheit
+let KelvinConvert = (Fahrenheit) => ((Fahrenheit - 32 ) * 5 / 9 ) + 273.15
+
 //Arctan of “pi” plus another value (in radians) arrow function
+let PiArctan = (value) => (Math.atan(Math.PI, value))
 
 //The sum of a number and its square, i.e. n + n * n arrow function
+let sumSquare = (number) => (number + (number*number))
 
 // isleapyear(year) returns true if year is a leapyear arrow function
+let isleapyear = (year) =>{
+  if(year%4 == 0){
+    return true
+  } else{
+    return false
+  }
+}
 
 //timeFallen(distance) returns time in seconds that an object takes to fall a given distance (at sea level on planet Earth) arrow function
+let fallTime = (distance) => {
+  return Math.sqrt(2 * distance/9.8)
+}
+
 
 //
 
