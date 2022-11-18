@@ -47,7 +47,8 @@ const distances = [2, 4, 6, 8, 10];
 //arrow functions
 
 //Pythagorean Theorm arrow function
-let Pythagorean =(Sidea, Sideb) =>Math.sqrt(((Math.pow(Sidea,2)) + (Math.pow(Sideb,2))));
+let Pythagorean = (Sidea, Sideb) => 
+Math.sqrt(((Math.pow(Sidea,2)) + (Math.pow(Sideb,2))));
 
 //Roots of quadratic equation arrow function (inner code copied from https://www.programiz.com/javascript/examples/quadratic-roots
 let quads = (a, b, c) => {
@@ -67,7 +68,8 @@ let quads = (a, b, c) => {
 }
   }
 //Volume of a sphere given radius arrow function
-let SphereVolume = (radius) => ((4/3) * Math.PI * (Math.pow(radius, 3)
+let SphereVolume = (radius) => 
+((4/3) * Math.PI * (Math.pow(radius, 3)
 //Arctan of “pi” plus another value (in radians) arrow function
 
 //The sum of a number and its square, i.e. n + n * n arrow function
