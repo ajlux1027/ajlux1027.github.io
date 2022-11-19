@@ -82,11 +82,11 @@ let sumSquare = (number) => (number + (number*number))
 
 // isleapyear(year) returns true if year is a leapyear arrow function
 let isleapyear = (year) =>{
-  if(year%4 == 0){
-    return true
-  } else if (year <0){
+  if(year < 0){
     return false
-  }
+  }else if(year%4 == 0){
+    return true
+  } 
 }
 
 //timeFallen(distance) returns time in seconds that an object takes to fall a given distance (at sea level on planet Earth) arrow function
