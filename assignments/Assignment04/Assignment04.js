@@ -94,9 +94,11 @@ let fallTime = (distance) => {
   return Math.sqrt(2 * distance/9.8)
 }
 
+//make event listener to listen for leap button to be clicked and then call the sum of leap function
 document.getElementById("LeapButton")
         .addEventListener("click", LeapSum);
 
+//make a sum of leap year function to calculate the total of the leap years
 function LeapSum(){
 let sum = 0
 years.map(year => {
@@ -108,6 +110,19 @@ years.map(year => {
             = sum
 }
 
+//make an event listener to listen for full name finder button to be clicked
+document.getElementById("NameFind")
+        .addEventListener("click", FullName);
+
+function FullName(){
+  let name = ""
+  Arr3.map(person =>{
+    name+= person.firstName + " " + person.lastName + '\n';
+   document.getElementById("Names").value = name; 
+  })
+ 
+  
+}
 
 //API Caller
 //Make event listeners for the buttons
