@@ -94,6 +94,19 @@ let fallTime = (distance) => {
   return Math.sqrt(2 * distance/9.8)
 }
 
+document.getElementById("LeapButton")
+        .addEventListener("click", LeapSum);
+
+function LeapSum(){
+let sum = 0
+years.map(year => {
+	if (isleapyear(year) === true){
+      sum += year
+      }
+})
+   document.getElementById("Leap").value 
+            = sum
+}
 
 
 //API Caller
