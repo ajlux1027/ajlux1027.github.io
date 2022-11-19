@@ -84,7 +84,7 @@ let sumSquare = (number) => (number + (number*number))
 let isleapyear = (year) =>{
   if(year%4 == 0){
     return true
-  } else{
+  } else if (year <0){
     return false
   }
 }
