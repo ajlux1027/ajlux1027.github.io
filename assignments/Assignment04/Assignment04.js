@@ -178,13 +178,13 @@ document.getElementById("SumArcs")
         .addEventListener("click", DisplayArcs);
 
 function DisplayArcs(){
-let arcTotal ="";
+let arcTotal =0;
 let arc = 0;
 r.map(number => {
 arc = PiArctan(number)
 arcTotal += arc
 })
-document.getElementById("Arctans").value = arcString
+document.getElementById("Arctans").value = arcTotal
 }
 
 //API Caller
