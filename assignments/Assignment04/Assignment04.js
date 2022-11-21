@@ -186,7 +186,6 @@ arcTotal += arc
 })
 document.getElementById("Arctans").value = arcString
 }
-}
 
 //API Caller
 //Make event listeners for the buttons
