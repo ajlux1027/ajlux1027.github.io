@@ -159,6 +159,23 @@ volumeString += volume + '\n'
 document.getElementById("Volumes").value = volumeString
 }
 
+//make an event listener to listen for distance button to be clicked
+document.getElementById("FallFind")
+        .addEventListener("click", DisplayFall);
+
+function DisplayFall(){
+let fallString ="";
+let fall = 0;
+distances.map(distance => {
+fall = fallTime(distance)
+fallString += distance + '\n'
+})
+document.getElementById("FallTimes").value = fallString
+}
+
+
+
+
 //API Caller
 //Make event listeners for the buttons
 document
