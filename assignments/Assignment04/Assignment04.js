@@ -145,6 +145,20 @@ sum += number
 document.getElementById("SumOfEvens").value = sum;
 }
 
+//make an event listener to listen for volume button to be clicked
+document.getElementById("Volume")
+        .addEventListener("click", DisplayVolumes);
+
+function DisplayVolumes(){
+let volumeString ="";
+let volume = 0;
+r.map(radii => {
+volume = SphereVolume(radii)
+volumeString += volume + '\n'
+})
+document.getElementById("Volumes").value = volumeString
+}
+
 //API Caller
 //Make event listeners for the buttons
 document
