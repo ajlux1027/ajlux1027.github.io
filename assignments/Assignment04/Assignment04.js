@@ -131,6 +131,19 @@ let product = Arr1.map((x, i) => Arr1[i] * Arr2[i]).reduce((m, n) => m + n);
 	document.getElementById("Product").value = product;
 }
 	
+//make an event listener to listen for Sum product button to be clicked
+document.getElementById("SumFind")
+        .addEventListener("click", EvenSum); 
+  
+function EvenSum(){
+let sum = 0;
+Arr2.map(number =>{
+if(number%2 === 0){
+sum += number
+}
+})
+document.getElementById("SumOfEvens").value = sum;
+}
 
 //API Caller
 //Make event listeners for the buttons
