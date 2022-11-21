@@ -168,13 +168,25 @@ let fallString ="";
 let fall = 0;
 distances.map(distance => {
 fall = fallTime(distance)
-fallString += distance + '\n'
+fallString += fall + '\n'
 })
 document.getElementById("FallTimes").value = fallString
 }
 
+//make an event listener to listen for arctans button to be clicked
+document.getElementById("SumArcs")
+        .addEventListener("click", DisplayArcs);
 
-
+function DisplayArcs(){
+let arcTotal ="";
+let arc = 0;
+r.map(number => {
+arc = PiArctan(number)
+arcTotal += arc
+})
+document.getElementById("Arctans").value = arcString
+}
+}
 
 //API Caller
 //Make event listeners for the buttons
