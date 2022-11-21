@@ -120,9 +120,17 @@ function FullName(){
     name+= person.firstName + " " + person.lastName + '\n';
    document.getElementById("Names").value = name; 
   })
- 
-  
 }
+//make an event listener to listen for dot product button to be clicked
+document.getElementById("ProductFind")
+        .addEventListener("click", DotProduct); 
+  
+function DotProduct(){
+let product = Arr1.map((x, i) => Arr1[i] * Arr2[i]).reduce((m, n) => m + n);
+	
+	document.getElementById("Product").value = product;
+}
+	
 
 //API Caller
 //Make event listeners for the buttons
