@@ -17,4 +17,5 @@ function loadDoc() {
   
   // pre-fill defaults for first loan year
   var defaultYear = loans[0].loan_year;
-    
+  //event listener for button click  
+document.getElementById("recalculate").addEventListener("click", processForm());
