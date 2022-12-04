@@ -91,6 +91,41 @@ function loadDoc() {
     for(var i=1; i<5; i++) {
       loans[i].loan_year = loans[0].loan_year + i;
     }
+    // ----- ANGULAR -----
+
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+  $scope.payments = [];
+  $scope.populate = function () {
+    
+    updateForm();
+    
+    let total = loanWithInterest;
+    let iRate = loans[0].loan_int_rate;
+    let r = iRate / 12;
+    let n = 11;
+    //loan payment formula
+    //https://www.thebalance.com/loan-payment-calculations-315564
+    let pay = 12 * (total / ((((1+r)**(n*12))-1)/(r *(1+r)**(n*12))));
+    for (let i = 0; i < 10; i++) {
+      total -= pay 
+      let int = total * (iRate); 
+      $scope.payments[i] = {
+        "year":loans[4].loan_year + i + 1,
+        "payment": toMoney(pay), 
+        "amt": toMoney(int),
+        "ye": toMoney(total += int)
+      }
+    }
+    $scope.payments[10] = {
+      "year":loans[4].loan_year + 11,
+      "payment": toMoney(total),
+      "amt": toMoney(0),
+      "ye":toMoney(0)
+    }
+  }
+});
     for(i = 1; i<6; i++){
       let amt = parseFloat($(`#loan_amt0${i}`).val()).toFixed(2);
       loans[i-1].loan_amount = amt;
