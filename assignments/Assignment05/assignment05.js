@@ -1,3 +1,4 @@
+//Use the template code provided to make the Javascript for the Loan calculator
 // ===== GLOBAL VARIABLES =====
 
 // default values
@@ -16,22 +17,22 @@ let payments;
 
 // ----- Plain JavaScript Functions -----
 
-// -------------------------------------------------------
+//Regular Expression Function to add a comma to inputted value
 function toComma(value) {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// -------------------------------------------------------
+//regular expression function to make the inputted value be read as money. Making it so it is formatted 
 let toMoney = (value) => {
   return `\$${toComma(value.toFixed(2))}`; 
 }
 
-// -------------------------------------------------------
+//local storage function to save the input
 let saveForm = () => {
   localStorage.setItem(`as06`, JSON.stringify(loans));
 }
 
-// -------------------------------------------------------
+//local storage function to load previous input
 let loadForm = () => {
   if(localStorage.getItem(`as06`) != null){
      loans = JSON.parse(localStorage.getItem(`as06`));
@@ -43,7 +44,7 @@ let loadForm = () => {
 
 // ----- JQUERY Functions -----
 
-// -------------------------------------------------------
+
 // display the entry form
 function loadDoc() {
     
@@ -79,7 +80,7 @@ function loadDoc() {
     
   $("input[type=text]").focus(function() {
     $(this).select();
-    $(this).css("background-color", "yellow");
+    $(this).css("background-color", "white");
   }); 
   $("input[type=text]").blur(function() {
     $(this).css("background-color", "white");
