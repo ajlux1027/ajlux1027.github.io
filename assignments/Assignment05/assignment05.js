@@ -1,34 +1,51 @@
 //use the provided template JS code
 
-// --- global variables ---
+// ===== GLOBAL VARIABLES =====
 
-var loans = [
-  { loan_year: 2020, loan_amount: 10000.00, loan_int_rate: 0.0453 },
-  { loan_year: 2021, loan_amount: 10000.00, loan_int_rate: 0.0453 },
-  { loan_year: 2022, loan_amount: 10000.00, loan_int_rate: 0.0453 },
-  { loan_year: 2023, loan_amount: 10000.00, loan_int_rate: 0.0453 },
-  { loan_year: 2024, loan_amount: 10000.00, loan_int_rate: 0.0453 }
+// default values
+let loans = [
+    { loan_year: 2020, loan_amount: 10000.00, loan_int_rate: 0.0453 },
+    { loan_year: 2021, loan_amount: 10000.00, loan_int_rate: 0.0453 },
+    { loan_year: 2022, loan_amount: 10000.00, loan_int_rate: 0.0453 },
+    { loan_year: 2023, loan_amount: 10000.00, loan_int_rate: 0.0453 },
+    { loan_year: 2024, loan_amount: 10000.00, loan_int_rate: 0.0453 }
 ]; 
+let loanWithInterest = 0;
+let int = 0;
+let payments;
 
+// ===== FUNCTIONS =====
 
-//Add a localStorage function to save the form details
+// ----- Plain JavaScript Functions -----
+
+// -------------------------------------------------------
+function toComma(value) {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+// -------------------------------------------------------
+let toMoney = (value) => {
+  return `\$${toComma(value.toFixed(2))}`; 
+}
+
+// -------------------------------------------------------
 let saveForm = () => {
   localStorage.setItem(`as06`, JSON.stringify(loans));
 }
 
-//Add a local Storage function to load in the pas
+// -------------------------------------------------------
 let loadForm = () => {
-  //if there is currently a saved value then load the value
   if(localStorage.getItem(`as06`) != null){
      loans = JSON.parse(localStorage.getItem(`as06`));
      updateForm();
   } else {
-    //otherwise give an error
      alert(`Error: no saved values`);
   }
 }
 
 // ----- JQUERY Functions -----
+
+// -------------------------------------------------------
 // display the entry form
 function loadDoc() {
     
@@ -42,7 +59,7 @@ function loadDoc() {
   var loanWithInterest 
     = loans[0].loan_amount * (1 + loans[0].loan_int_rate);
   $("#loan_bal0" + 1).text(toMoney(loanWithInterest));
-  
+    
   // pre-fill defaults for other loan years
   for(var i=2; i<6; i++) {
     $(`#loan_year0${i}`).val(defaultYear++);
@@ -60,10 +77,24 @@ function loadDoc() {
       = (loanWithInterest + defaultLoanAmount) 
       * (1 + defaultInterestRate);
     $("#loan_bal0" + i).text(toMoney(loanWithInterest));
-  }
+  } // end: "for" loop
+    
+  $("input[type=text]").focus(function() {
+    $(this).select();
+    $(this).css("background-color", "yellow");
+  }); 
+  $("input[type=text]").blur(function() {
+    $(this).css("background-color", "white");
+    updateLoansArray();
+  });
+    
+  // set focus to first year: messes up codepen
+  // $("#loan_year01").focus();
 
-  
-  function updateLoansArray() {
+} // end: function loadDoc()
+
+// -------------------------------------------------------
+function updateLoansArray() {
   
   // regex tester web site: https://www.regexpal.com/
   let yearP = /^(19|20)\d{2}$/;
@@ -91,7 +122,43 @@ function loadDoc() {
     for(var i=1; i<5; i++) {
       loans[i].loan_year = loans[0].loan_year + i;
     }
-    // ----- ANGULAR -----
+    for(i = 1; i<6; i++){
+      let amt = parseFloat($(`#loan_amt0${i}`).val()).toFixed(2);
+      loans[i-1].loan_amount = amt;
+    }
+    let rate = parseFloat($("#loan_int01").val());
+    for(i=0; i<5; i++){
+      loans[i].loan_int_rate = rate;
+    }
+    
+    updateForm();
+    
+  } // end: if
+  
+} // end: function updateLoansArray()
+
+// -------------------------------------------------------
+let updateForm = () => {
+  loanWithInterest = 0;
+  let totalAmt = 0;
+  for(i = 1; i < 6; i++) {
+    $(`#loan_year0${i}`).val(loans[i - 1].loan_year);
+    let amt = loans[i - 1].loan_amount;
+    $(`#loan_amt0${i}`).val(amt);
+    totalAmt += parseFloat(amt);
+    $(`#loan_int0${i}`).val(loans[i - 1].loan_int_rate);
+    loanWithInterest 
+      = (loanWithInterest + parseFloat(amt)) 
+      * (1 + loans[0].loan_int_rate);
+    $("#loan_bal0" + i).text(toMoney(loanWithInterest));
+  }
+  int = loanWithInterest - totalAmt;
+  $(`#loan_int_accrued`).text(toMoney(int));
+  
+} // end: function updateForm()
+  
+
+// ----- ANGULAR -----
 
 var app = angular.module('myApp', []);
 
@@ -126,13 +193,3 @@ app.controller('myCtrl', function($scope) {
     }
   }
 });
-    for(i = 1; i<6; i++){
-      let amt = parseFloat($(`#loan_amt0${i}`).val()).toFixed(2);
-      loans[i-1].loan_amount = amt;
-    }
-    let rate = parseFloat($("#loan_int01").val());
-    for(i=0; i<5; i++){
-      loans[i].loan_int_rate = rate;
-    }
-    
-    updateForm();
