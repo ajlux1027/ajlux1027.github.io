@@ -86,12 +86,12 @@ function loadDoc() {
     updateLoansArray();
   });
     
-  // set focus to first year: messes up codepen
-  // $("#loan_year01").focus();
+  // set focus to first year
+  $("#loan_year01").focus();
 
 } // end: function loadDoc()
 
-// -------------------------------------------------------
+//make function to update the array
 function updateLoansArray() {
   
   // regex tester web site: https://www.regexpal.com/
@@ -135,7 +135,7 @@ function updateLoansArray() {
   
 } // end: function updateLoansArray()
 
-// -------------------------------------------------------
+//make function to update form
 let updateForm = () => {
   loanWithInterest = 0;
   let totalAmt = 0;
