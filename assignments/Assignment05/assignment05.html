@@ -17,7 +17,7 @@
 		</style>
 	</head>
 
-	<body onload="loadDoc();">
+		<body onload="loadDoc();">
 
 		<div class="container">
 
@@ -135,9 +135,12 @@
 									</tr>
 								</table>
 								<br />
-								<button type="button" class="btn btn-primary" ng-click="populate();">Re-calculate</button> 
-								<button type="button" class="btn btn-secondary" onclick="saveForm();">Save</button>
-								<button type="button" class="btn btn-secondary" onclick="loadForm();">Load</button>
+								<button type="button" class="btn btn-primary" 
+                        ng-click="populate();">Re-calculate</button> 
+								<button type="button" class="btn btn-secondary" 
+                        onclick="saveForm();">Save</button>
+								<button type="button" class="btn btn-secondary" 
+                        onclick="loadForm();">Load</button>
 							</div>
 						</div>
 
@@ -161,11 +164,8 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
-
 			</form>
-
 		</div>
 		<!-- implement the jquery 3.4.1 -->
 		<script
