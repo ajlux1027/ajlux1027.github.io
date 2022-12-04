@@ -72,30 +72,31 @@
 						<button type="button" class="btn btn-primary" Id="recalculate">Re-calculate</button> 
 						</div>
 					</div>
-			<div class="col-lg-6">
-						<div class="form-group">
-						
-							<h2>Payments</h2>
-							
-							<table class="table">
-								<tr>
-									<th>Year</th>
-									<th>Payments</th>
-									<th>Int Amt</th>
-									<th>YE Bal</th>
-								</tr>
-								<tr>
-									<td><span id="pmt_year01">2025</span></td>
-									<td><span id="pmt_amt01">$6,500.00</span></td>
-									<td><span id="pmt_int01">$2,297.60</span></td>
-									<td><span id="pmt_bal01">$53,017.22</span></td>
-								</tr>
-								
-							</table>
+							<div class="col-lg-6">
+							<div class="form-group">
+								<h2>Payments</h2>
+								<table class="table">
+									<tr>
+										<th>Year</th>
+										<th>Payments</th>
+										<th>Int Amt</th>
+										<th>YE Bal</th>
+									</tr>
+									<tr ng-repeat="x in payments">
+										<td>{{ x.year }}</td>
+										<td>{{ x.payment }}</td>
+										<td>{{ x.amt }}</td>
+										<td>{{ x.ye }}</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
+
 				</div>
+
 			</form>
+
 		</div>
 		<!-- implement the jquery 3.4.1 -->
 		<script
