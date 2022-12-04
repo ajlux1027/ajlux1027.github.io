@@ -19,6 +19,7 @@ let payments;
 
 //Regular Expression Function to add a comma to inputted value
 function toComma(value) {
+    //make it so if the amount of money doesnt have a comma in it, then it adds a comma
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
@@ -78,6 +79,7 @@ function loadDoc() {
     $("#loan_bal0" + i).text(toMoney(loanWithInterest));
   } // end: "for" loop
     
+    //make it so if the input box is being focused on then the background color is white
   $("input[type=text]").focus(function() {
     $(this).select();
     $(this).css("background-color", "white");
@@ -96,8 +98,11 @@ function loadDoc() {
 function updateLoansArray() {
   
   // regex tester web site: https://www.regexpal.com/
+    //make is so the year starts with either 19 0r 20
   let yearP = /^(19|20)\d{2}$/;
+    //make an amount using regular expression to make it be any number
   let amtP = /^([1-9][0-9]*)+(.[0-9]{1,2})?$/;
+    //make a interest rate using regular expression making it so the interest rate is less than 0
   let intP = /^(0|)+(.[0-9]{1,5})?$/;
 
   let valid = true;
