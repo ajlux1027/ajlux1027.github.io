@@ -1,5 +1,3 @@
-//use the provided template JS code
-
 // ===== GLOBAL VARIABLES =====
 
 // default values
