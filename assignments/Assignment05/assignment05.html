@@ -19,17 +19,17 @@
 	</head>
 
 		<body onload="loadDoc();">
-
+		<!--Make a div container class to use the bootstrap-->
 		<div class="container">
 			<!--make a angular controller app-->
 			<div ng-app="myApp" ng-controller="myCtrl">
-
+				<!--open a form to hold the Debt calculator form-->
 				<form>
-
-					<h1>College Debt Estimator</h1>
-
-					<br />
-
+					<!--Make a header to explain what the app is-->
+					<h1>College Debt Estimator</h1> 
+					<!--make a new line before...-->
+					<br/>
+					<!--... making a table to be the debt calculator-->
 					<div class="row">      
 						<div class="col-lg-6">
 							<div class="form-group">
@@ -38,123 +38,157 @@
 
 								<table class="table" id="loan_table">
 									<tr>
+										<!--make table heading for the year, the amount, the interest rate, and the balance-->
 										<th>Year</th>
 										<th>Amount</th>
-										<th>Int Rate<a target="_blank" href="https://studentaid.ed.gov/sa/types/loans/interest-rates"><sup>1</sup></a></th>
+										<th>Int Rate<a target="_blank" 
+											       href="https://studentaid.ed.gov/sa/types/loans/interest-rates"><sup>1</sup></a></th>
 										<th>YE Bal</th>
 									</tr>
 									<tr>
 										<td>
+											<!--make a input box for the starting year for loans-->
 											<input type="text" class="form-control" 
-                             placeholder="2020" id="loan_year01" />
+											       placeholder="2020" id="loan_year01" />
 										</td>
 										<td>
+											<!--make a input box for the starting amount for loans-->
 											<input type="text" class="form-control" 
-                             placeholder="$10,000.00" id="loan_amt01" />
+                             									placeholder="$10,000.00" id="loan_amt01" />
 										</td>
 										<td>
+											<!--make a input box for the interest rate loans-->
 											<input type="text" class="form-control" 
-                             placeholder="0.0453" id="loan_int01" />
+                       									      placeholder="0.0453" id="loan_int01" />
 										</td>
 										<td>
+											<!--Show the value of the loan-->
 											<span id="loan_bal01">$10,453.00</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
+											<!--Make place holder for the year that will change dependant on the entered first year-->
 											<input type="text" class="form-control" 
-                             placeholder="2021" id="loan_year02" />
+                             									placeholder="2021" id="loan_year02" />
 										</td>
 										<td>
+											<!--Make place holder for the amount that can be changed-->
 											<input type="text" class="form-control" 
-                             placeholder="$10,000.00" id="loan_amt02" />
+                         								    placeholder="$10,000.00" id="loan_amt02" />
 										</td>
 										<td>
+											<!--Make place holder for the interest rate that depends on the first entered interest rate-->
 											<input type="text" class="form-control" 
-                             placeholder="0.0453" id="loan_int02" />
+                       									      placeholder="0.0453" id="loan_int02" />
 										</td>
 										<td>
+											<!--Show the value of the loan-->
 											<span id="loan_bal02">$21,379.52</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
+											<!--Make place holder for the year that will change dependant on the entered first year-->
 											<input type="text" class="form-control" 
-                             placeholder="2022" id="loan_year03" />
+                         								    placeholder="2022" id="loan_year03" />
 										</td>
 										<td>
+											<!--Make place holder for the amount that can be changed-->
 											<input type="text" class="form-control" 
-                             placeholder="$10,000.00" id="loan_amt03" />
+                    									         placeholder="$10,000.00" id="loan_amt03" />
 										</td>
 										<td>
+											<!--Make place holder for the interest rate that depends on the first entered interest rate-->
 											<input type="text" class="form-control" 
-                             placeholder="0.0453" id="loan_int03" />
+                          									placeholder="0.0453" id="loan_int03" />
 										</td>
 										<td>
+											<!--Show the value of the loan-->
 											<span id="loan_bal03">$32,801.01</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
+											<!--Make place holder for the year that will change dependant on the entered first year-->
 											<input type="text" class="form-control" 
-                             placeholder="2023" id="loan_year04" />
+                             									placeholder="2023" id="loan_year04" />
 										</td>
 										<td>
+											<!--Make place holder for the amount that can be changed-->
 											<input type="text" class="form-control" 
-                             placeholder="$10,000.00" id="loan_amt04" />
+                             									placeholder="$10,000.00" id="loan_amt04" />
 										</td>
 										<td>
+											<!--Make place holder for the interest rate that depends on the first entered interest rate-->
 											<input type="text" class="form-control" 
-                             placeholder="0.0453" id="loan_int04" />
+                             									placeholder="0.0453" id="loan_int04" />
 										</td>
 										<td>
+											<!--Show the value of the loan-->
 											<span id="loan_bal04">$44,739.90</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
+											<!--Make place holder for the year that will change dependant on the entered first year-->
 											<input type="text" class="form-control" 
-                             placeholder="2024" id="loan_year05" />
+                             									placeholder="2024" id="loan_year05" />
 										</td>
 										<td>
+											<!--Make place holder for the amount that can be changed-->
 											<input type="text" class="form-control" 
-                             placeholder="$10,000.00" id="loan_amt05" />
+                             									placeholder="$10,000.00" id="loan_amt05" />
 										</td>
 										<td>
+											<!--Make place holder for the interest rate that depends on the first entered interest rate-->
 											<input type="text" class="form-control" 
-                             placeholder="0.0453" id="loan_int05" />
+                             									placeholder="0.0453" id="loan_int05" />
 										</td>
 										<td>
+											<!--Show the value of the loan-->
 											<span id="loan_bal05">$57,219.62</span>
 										</td>
 									</tr>
 									<tr>
+										<!--Make a label to show the interest gathered over time-->
 										<td colspan="3">Interest accrued while attending college:</td>
 										<td>
+											<!--Display accrued interest based off of the place holder values-->
 											<span id="loan_int_accrued">$7,219.62</span>
 										</td>
 									</tr>
+								<!--End of the loan table-->	
 								</table>
-								<br />
-								<button type="button" class="btn btn-primary" 
-                        ng-click="populate();">Re-calculate</button> 
+								
+								<!--Break a new line-->
+								<br/>
+								
+								<!-- Recalculate app running on the angular app-->
+								<button type="button" class="btn btn-primary"
+                        						ng-click="populate();">Re-calculate</button> 
+								<!--Save button that goes on the click-->
 								<button type="button" class="btn btn-secondary" 
-                        onclick="saveForm();">Save</button>
+                        						onclick="saveForm();">Save</button>
+								<!--load button that goes on the click-->
 								<button type="button" class="btn btn-secondary" 
-                        onclick="loadForm();">Load</button>
+                        						onclick="loadForm();">Load</button>
 							</div>
 						</div>
 
+						<!-- Make table of loan payments based off of info from the loan table-->
 						<div class="col-lg-6">
 							<div class="form-group">
 								<h2>Payments</h2>
 								<table class="table">
 									<tr>
+										<!--Make table headings based off of the year, payments, interest, and balance-->
 										<th>Year</th>
 										<th>Payments</th>
 										<th>Int Amt</th>
 										<th>YE Bal</th>
 									</tr>
+									<!--use the angular app to calculate the year, the payment, the amount left, and the yearly balance-->
 									<tr ng-repeat="x in payments">
 										<td>{{ x.year }}</td>
 										<td>{{ x.payment }}</td>
