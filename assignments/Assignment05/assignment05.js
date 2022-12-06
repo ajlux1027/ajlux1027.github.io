@@ -212,25 +212,25 @@ app.controller('myCtrl', function($scope) {
     let n = 11;
     //loan payment formula
     //https://www.thebalance.com/loan-payment-calculations-315564
-    let pay = 12 * (total / ((((1+r)**(n*12))-1)/(r *(1+r)**(n*12))));
-      //loop through the 10 months of the payment
+let pay = 12 * (total / ((((1+r)**(n*12))-1)/(r *(1+r)**(n*12))));
     for (let i = 0; i < 10; i++) {
-        //subtract the amount currently being paid from the total 
       total -= pay 
-        //let the interest paid equal total times the interest rate
       let int = total * (iRate); 
-        //make the current table row be based off of information from the looping through the array
       $scope.payments[i] = {
-          //make the year equal the last year in loans table + index+1 (making it so it is 1 year after the last year)
         "year":loans[4].loan_year + i + 1,
-          //display the payment in money format
         "payment": toMoney(pay), 
-          //display interest paid in money format
         "amt": toMoney(int),
-          //display the yearly pay in money format
         "ye": toMoney(total += int)
       }
     }
+    $scope.payments[10] = {
+      "year":loans[4].loan_year + 11,
+      "payment": toMoney(total),
+      "amt": toMoney(0),
+      "ye":toMoney(0)
+    }
+  }
+});
       //on the last yearly payment show the proper information
     $scope.payments[10] = {
         //make it show the last loan year plus 11
