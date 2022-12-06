@@ -236,7 +236,7 @@ app.controller('myCtrl', function($scope) {
         //make it show the last loan year plus 11
       "year":loans[4].loan_year + 11,
         //show the final payment in money format
-      "payment": toMoney(total).css("background-color", "yellow"),
+      "payment": toMoney(total),
         //since this will be the last payment the amount left, and yearly payment will be 0
       "amt": toMoney(0),
       "ye":toMoney(0)
