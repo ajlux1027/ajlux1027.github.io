@@ -98,65 +98,45 @@ function loadDoc() {
 function updateLoansArray() {
   
   // regex tester web site: https://www.regexpal.com/
-    //make is so the year starts with either 19 0r 20
   let yearP = /^(19|20)\d{2}$/;
-    //make an amount using regular expression to make it be any number
   let amtP = /^([1-9][0-9]*)+(.[0-9]{1,2})?$/;
-    //make a interest rate using regular expression making it so the interest rate is less than 0
   let intP = /^(0|)+(.[0-9]{1,5})?$/;
 
-    //make a variable to hold if the given value is valid for the table
   let valid = true;
-    
-    //if the year is not valid according to regular statements
   if(!yearP.test($(`#loan_year01`).val())){
-    //mark validity as false
-      valid = false;
-      //change background color of the text box to red
+    valid = false;
     $(`#loan_year01`).css("background-color", "red");
   }
-    //loop through 1-6 for the spots in the table
   for (i = 1; i < 6; i++) {
-      //if the loan amount does not meet the requirements made by the regular expression...
     if(!amtP.test($(`#loan_amt0${i}`).val())) {
-        //...then mark the validity as false
       valid = false;
-        //then also make the text box red
       $(`#loan_amt0${i}`).css("background-color", "red");
     } 
   }
-    //if the interest rate isnt valid according to the requirements made by the regular expression then
   if(!intP.test($(`#loan_int01`).val())) {
-       //...mark the validity as false
     valid = false;
-      //and make the invalid text box red
     $(`#loan_int01`).css("background-color", "red");
   }
-//if all the inputs are valid then...
+
   if(valid) {
-      //...make the first index of the loans array equal the first year
     loans[0].loan_year = parseInt($("#loan_year01").val());
-      //then loop through the other 5 indexes of the array
     for(var i=1; i<5; i++) {
-        //set the year of the current index to the value of loans + the value of i
       loans[i].loan_year = loans[0].loan_year + i;
     }
-      //then loop through the table to get the value of the loan amount
     for(i = 1; i<6; i++){
-        //make the amt variable equal the number of what was entered
       let amt = parseFloat($(`#loan_amt0${i}`).val()).toFixed(2);
       loans[i-1].loan_amount = amt;
     }
-      //make the rate equals the given interest rate
     let rate = parseFloat($("#loan_int01").val());
-      //loop through the array so that it is a consistant interest rate
     for(i=0; i<5; i++){
       loans[i].loan_int_rate = rate;
     }
-    //update the form based on the updated array
+    
     updateForm();
     
-  }
+  } // end: if
+  
+} // end: function updateLoansArray()
   
 }
 
