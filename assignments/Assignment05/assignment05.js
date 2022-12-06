@@ -195,24 +195,21 @@ let updateForm = () => {
   
 
 // ----- ANGULAR -----
-//make the app using angular
 var app = angular.module('myApp', []);
-//make the controller for the angular app to populate the payments table
+
 app.controller('myCtrl', function($scope) {
   $scope.payments = [];
   $scope.populate = function () {
-    //run the update form function
+    
     updateForm();
-    //make it so the total equals the loan with interest
+    
     let total = loanWithInterest;
-      //make it so interest rate equals the entered int rate
     let iRate = loans[0].loan_int_rate;
-      //make it so r equals intRate/12
     let r = iRate / 12;
     let n = 11;
     //loan payment formula
     //https://www.thebalance.com/loan-payment-calculations-315564
-let pay = 12 * (total / ((((1+r)**(n*12))-1)/(r *(1+r)**(n*12))));
+    let pay = 12 * (total / ((((1+r)**(n*12))-1)/(r *(1+r)**(n*12))));
     for (let i = 0; i < 10; i++) {
       total -= pay 
       let int = total * (iRate); 
@@ -226,18 +223,6 @@ let pay = 12 * (total / ((((1+r)**(n*12))-1)/(r *(1+r)**(n*12))));
     $scope.payments[10] = {
       "year":loans[4].loan_year + 11,
       "payment": toMoney(total),
-      "amt": toMoney(0),
-      "ye":toMoney(0)
-    }
-  }
-});
-      //on the last yearly payment show the proper information
-    $scope.payments[10] = {
-        //make it show the last loan year plus 11
-      "year":loans[4].loan_year + 11,
-        //show the final payment in money format
-      "payment": toMoney(total),
-        //since this will be the last payment the amount left, and yearly payment will be 0
       "amt": toMoney(0),
       "ye":toMoney(0)
     }
