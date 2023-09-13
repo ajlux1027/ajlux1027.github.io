@@ -1,9 +1,11 @@
 /* file: landingPage.css */
 /* Author: Alex Lux*/
+/*Use of  Cody "CodeMan38" Boisclair's Font Press Start 2 P */
 /*This is to add format and design to Alex Lux landing page/portfolio*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 h1{
+color: DodgerBlue
 text-align: center;
 font-family: 'Press Start 2P', cursive;
  }
