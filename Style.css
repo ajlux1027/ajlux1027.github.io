@@ -9,3 +9,20 @@ color: DodgerBlue;
 text-align: center;
 font-family: 'Press Start 2P', cursive;
  }
+.btn-project{
+  background: CornflowerBlue;
+  background: radial-gradient(circle, CornflowerBlue 0%, DeepPink 100%);
+  border: none;
+}
+.btn-project span {
+  position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-project:hover{
+  background: DeepPink;
+  color: White;
+  box-shadow: none;
+}
