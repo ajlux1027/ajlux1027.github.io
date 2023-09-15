@@ -35,3 +35,27 @@ button {
    4px 4px 5px 0px White;
   outline: none;
 }
+.Mover {
+  background: DeepPink;
+background: radial-gradient(circle, DeepPink 0%, CornflowerBlue 100%);
+  color: White;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.Mover:hover{
+  background: CornflowerBlue;
+  color: Black;
+ box-shadow:inset 2px 2px 2px 0px Gray,
+   7px 7px 20px 0px Gray,
+   4px 4px 5px 0px Gray;
+  outline: none;
+}
+
+.Mover span:hover:before {
+  width: 100%;
+}
+.Mover span:hover:after {
+  width: 100%;
+}
