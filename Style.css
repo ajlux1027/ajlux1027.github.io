@@ -226,12 +226,12 @@ button {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 18px;
-  height: 18px;
-  background: #4FA8FF;
+  width: 0;
+  height: 0;
+  border: 9px solid #4FA8FF;
+  border-radius: 50%;
   transform: translateY(-50%);
-  clip-path: polygon(100% 50%, 45% 0%, 45% 25%, 0% 25%, 0% 75%, 45% 75%, 45% 100%);
-  animation: munch-move 4s linear infinite, munch-chomp 0.3s steps(2) infinite;
+  animation: munch-move 4s linear infinite, munch-chomp 0.3s steps(1) infinite;
 }
 
 @keyframes munch-move {
@@ -239,9 +239,12 @@ button {
   100% { left: calc(100% - 18px); }
 }
 
+/* Toggles the right-side border between transparent (mouth open) and
+   solid (mouth closed) — a clean two-frame chomp instead of a
+   mis-shaped clip-path. */
 @keyframes munch-chomp {
-  0%   { clip-path: polygon(100% 50%, 45% 0%, 45% 25%, 0% 25%, 0% 75%, 45% 75%, 45% 100%); }
-  100% { clip-path: polygon(100% 50%, 20% 15%, 20% 15%, 0% 25%, 0% 75%, 20% 85%, 20% 85%); }
+  0%, 100% { border-right-color: transparent; }
+  50%      { border-right-color: #4FA8FF; }
 }
 
 /* CHANGE 10: Bio section — actual content, styled in the mono body
@@ -259,25 +262,44 @@ button {
   line-height: 1.7;
 }
 
-/* CHANGE 11: Claw-slash divider — three abstract diagonal strokes.
-   Deliberately not shaped like any character's claws/logo, just a
-   quiet graphic mark that nods to a comic-book aesthetic. */
-.claw-divider {
-  width: 140px;
+/* CHANGE 11: Firework/sparkle divider — an original 8-ray burst radiating
+   from a center point, alternating your blue/pink accents, with small
+   dots at the tips of the long rays. A gentle staggered "twinkle"
+   (opacity pulse) makes it feel alive without being a distraction. */
+.firework-divider {
+  width: 90px;
   margin: 0 auto 50px;
-  opacity: 0.5;
 }
 
-.claw-divider svg {
+.firework-divider svg {
   width: 100%;
   height: auto;
 }
 
-.claw-divider path {
-  stroke: #FF3E9D;
-  stroke-width: 2;
-  stroke-linecap: round;
-  fill: none;
+.firework-divider .ray {
+  animation: twinkle 2.4s ease-in-out infinite;
+}
+
+.firework-divider .ray-long {
+  animation-duration: 1.8s;
+}
+
+.firework-divider .ray:nth-child(2) { animation-delay: 0.2s; }
+.firework-divider .ray:nth-child(3) { animation-delay: 0.4s; }
+.firework-divider .ray:nth-child(4) { animation-delay: 0.6s; }
+.firework-divider .ray:nth-child(5) { animation-delay: 0.1s; }
+.firework-divider .ray:nth-child(6) { animation-delay: 0.5s; }
+.firework-divider .ray:nth-child(7) { animation-delay: 0.3s; }
+.firework-divider .ray:nth-child(8) { animation-delay: 0.7s; }
+
+.firework-divider .spark {
+  animation: twinkle 2.4s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.35; }
+  50%      { opacity: 1; }
 }
 
 /* CHANGE 12: Section headings, skills tags, and project cards —
