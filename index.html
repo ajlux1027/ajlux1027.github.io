@@ -9,14 +9,41 @@
 <link rel="stylesheet" href="Style.css">
  </head>
  <body>
+  <!--CRT scanline overlay, purely decorative-->
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
   <!--Set the page heading-->
   <main class="page">
     <h1>Alex Lux</h1>
-    <p class="tagline">Full-Stack Developer</p>
+    <p class="tagline"><span id="tagline-text"></span><span class="cursor">_</span></p>
     <div class="frame">
       <button class="hub-btn Mover"><span>Projects</span></button>
       <button class="hub-btn Mover"><span>Info</span></button>
     </div>
   </main>
+
+  <script>
+    // Boot-sequence: type out the tagline, then reveal the buttons.
+    const text = "Full-Stack Developer";
+    const target = document.getElementById('tagline-text');
+    const buttons = document.querySelectorAll('.hub-btn');
+    let i = 0;
+
+    function typeNext() {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeNext, 45);
+      } else {
+        buttons.forEach((btn, index) => {
+          setTimeout(() => btn.classList.add('is-visible'), index * 150);
+        });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(typeNext, 400);
+    });
+  </script>
  </body>
 </html>
