@@ -93,7 +93,8 @@ h1 {
 
 /* CHANGE 3: New tagline using a monospace body font (JetBrains Mono).
    This pairs a second, readable typeface against the display pixel
-   font */
+   font — same "coder" personality, but legible at paragraph size,
+   which is what makes the page feel professional rather than a demo. */
 .tagline {
   font-family: 'JetBrains Mono', monospace;
   color: #A9B4D0;
@@ -105,7 +106,8 @@ h1 {
 
 /* CHANGE 7: Blinking terminal cursor after the tagline. Combined with
    the typewriter effect in the HTML's script, this makes the tagline
-   feel "typed" by a terminal rather than static text */
+   feel "typed" by a terminal rather than static text — reinforcing
+   the developer/coder identity. */
 .cursor {
   animation: blink 1s step-end infinite;
 }
@@ -139,7 +141,7 @@ button {
   outline: none;
   /* CHANGE 8: Buttons start hidden/dropped and animate in once
      .is-visible is added by the boot-sequence script, so they arrive
-     after the tagline finishes typing like a game menu rendering
+     after the tagline finishes typing — like a game menu rendering
      in, rather than everything appearing at once. */
   opacity: 0;
   transform: translateY(16px);
@@ -194,4 +196,162 @@ button {
     width: 160px;
     height: 80px;
   }
+}
+
+/* CHANGE 9: Original "dot-muncher" divider. This is a deliberately
+   different shape/color from Pac-Man (a hexagon instead of a circle,
+   blue instead of yellow, no wedge "mouth") — an homage to the arcade
+   theme rather than a copy of a specific character. It also does real
+   work: it visually separates the "hub" (buttons) from the content
+   below, instead of leaving a plain gap. */
+.dot-divider {
+  position: relative;
+  height: 24px;
+  margin: 50px auto 60px;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dot-divider .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4FA8FF;
+  opacity: 0.5;
+}
+
+.muncher {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background: #4FA8FF;
+  transform: translateY(-50%);
+  clip-path: polygon(100% 50%, 45% 0%, 45% 25%, 0% 25%, 0% 75%, 45% 75%, 45% 100%);
+  animation: munch-move 4s linear infinite, munch-chomp 0.3s steps(2) infinite;
+}
+
+@keyframes munch-move {
+  0%   { left: 0; }
+  100% { left: calc(100% - 18px); }
+}
+
+@keyframes munch-chomp {
+  0%   { clip-path: polygon(100% 50%, 45% 0%, 45% 25%, 0% 25%, 0% 75%, 45% 75%, 45% 100%); }
+  100% { clip-path: polygon(100% 50%, 20% 15%, 20% 15%, 0% 25%, 0% 75%, 20% 85%, 20% 85%); }
+}
+
+/* CHANGE 10: Bio section — actual content, styled in the mono body
+   font for readability, constrained width so lines don't stretch too
+   wide to read comfortably. */
+.bio {
+  max-width: 560px;
+  margin: 0 auto 50px;
+}
+
+.bio p {
+  font-family: 'JetBrains Mono', monospace;
+  color: #C7CEE3;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* CHANGE 11: Claw-slash divider — three abstract diagonal strokes.
+   Deliberately not shaped like any character's claws/logo, just a
+   quiet graphic mark that nods to a comic-book aesthetic. */
+.claw-divider {
+  width: 140px;
+  margin: 0 auto 50px;
+  opacity: 0.5;
+}
+
+.claw-divider svg {
+  width: 100%;
+  height: auto;
+}
+
+.claw-divider path {
+  stroke: #FF3E9D;
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/* CHANGE 12: Section headings, skills tags, and project cards —
+   the actual content that fills the remaining space and gives
+   recruiters something to read/scan, not just decoration. */
+.skills, .projects {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-family: 'JetBrains Mono', monospace;
+  color: #4FA8FF;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.tag-list li, .tag-list span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #A9B4D0;
+  background: rgba(79, 168, 255, 0.08);
+  border: 1px solid rgba(79, 168, 255, 0.3);
+  border-radius: 4px;
+  padding: 6px 14px;
+}
+
+.tag-list.small span {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(79, 168, 255, 0.15);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 62, 157, 0.4);
+}
+
+.project-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+}
+
+.project-card p {
+  font-family: 'JetBrains Mono', monospace;
+  color: #A9B4D0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0 0 14px;
 }
