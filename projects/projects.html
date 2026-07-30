@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Alex Lux</title>
+  <link rel="stylesheet" href="Style.css">
+ </head>
+ <body>
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
+  <main class="page">
+    <h1>Projects</h1>
+    <p class="tagline"><span id="tagline-text"></span><span class="cursor">_</span></p>
+
+    <div class="frame">
+      <a href="CIS255.html" class="hub-btn Mover"><span>CIS255</span></a>
+      <a href="CSIS503.html" class="hub-btn Mover"><span>CSIS503</span></a>
+      <a href="personal-projects.html" class="hub-btn Mover"><span>Personal Projects</span></a>
+    </div>
+
+    <p class="back-link"><a href="index.html">&larr; Back home</a></p>
+  </main>
+
+  <script>
+    const text = "Select a category";
+    const target = document.getElementById('tagline-text');
+    const buttons = document.querySelectorAll('.hub-btn');
+    let i = 0;
+
+    function typeNext() {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeNext, 45);
+      } else {
+        buttons.forEach((btn, index) => {
+          setTimeout(() => btn.classList.add('is-visible'), index * 150);
+        });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(typeNext, 400);
+    });
+  </script>
+ </body>
+</html>
