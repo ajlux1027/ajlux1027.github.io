@@ -26,9 +26,58 @@ body {
   margin: 0 auto;
   padding: 80px 20px 60px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-/* CHANGE 2: Heading keeps the pixel font but swaps
+/* CHANGE 6: CRT scanline overlay — a thin bright line that sweeps down
+   the page on a loop, plus a one-time flicker on load. This is the
+   page's signature move: it makes the dark background feel like an
+   actual arcade/terminal screen rather than just "a dark page." Kept
+   to a single subtle line + low-opacity flicker so it reads as
+   atmosphere, not distraction. Purely decorative, so aria-hidden. */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.scanline-overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(79, 168, 255, 0.35);
+  box-shadow: 0 0 8px 2px rgba(79, 168, 255, 0.25);
+  animation: scan 6s linear infinite;
+}
+
+.scanline-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  animation: flicker 1.2s ease-out 1;
+}
+
+@keyframes scan {
+  0%   { top: -2px; }
+  100% { top: 100%; }
+}
+
+@keyframes flicker {
+  0%   { opacity: 0.5; }
+  8%   { opacity: 0; }
+  10%  { opacity: 0.3; }
+  12%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* CHANGE 2: Heading keeps the pixel font (personal signature) but swaps
    flat color for a soft glow, plus letter-spacing so the blocky font
    has room to breathe. Color shifted from plain DodgerBlue to a
    slightly brighter electric blue for better contrast on the dark bg. */
@@ -44,8 +93,7 @@ h1 {
 
 /* CHANGE 3: New tagline using a monospace body font (JetBrains Mono).
    This pairs a second, readable typeface against the display pixel
-   font — same personality, but legible at paragraph size,
-   which is what makes the page feel professional rather than a demo. */
+   font */
 .tagline {
   font-family: 'JetBrains Mono', monospace;
   color: #A9B4D0;
@@ -53,6 +101,18 @@ h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0 0 40px;
+}
+
+/* CHANGE 7: Blinking terminal cursor after the tagline. Combined with
+   the typewriter effect in the HTML's script, this makes the tagline
+   feel "typed" by a terminal rather than static text */
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
 }
 
 .frame {
@@ -74,10 +134,21 @@ button {
   font-weight: 500;
   background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
   position: relative;
   display: inline-block;
   outline: none;
+  /* CHANGE 8: Buttons start hidden/dropped and animate in once
+     .is-visible is added by the boot-sequence script, so they arrive
+     after the tagline finishes typing like a game menu rendering
+     in, rather than everything appearing at once. */
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hub-btn.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* CHANGE 4: Replaced the pure-white box-shadow glow with a glow that
