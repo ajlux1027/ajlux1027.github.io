@@ -2,54 +2,107 @@
 /* Author: Alex Lux*/
 /*Use of  Cody "CodeMan38" Boisclair's Font Press Start 2 P */
 /*This is to add format and design to Alex Lux landing page/portfolio*/
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500&display=swap');
 
-h1{
-color: DodgerBlue;
-text-align: center;
-font-family: 'Press Start 2P', cursive;
- }
+/* CHANGE 1: Reset + dark background instead of default white.
+   A near-black navy (#12121C) reads as an "arcade screen" and makes the
+   neon pink/blue buttons pop instead of fighting a white page.
+   The faint radial-dot pattern is a subtle nod to old CRT/scanline
+   textures without being distracting. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #12121C;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+/* CHANGE 2: Heading keeps the pixel font but swaps
+   flat color for a soft glow, plus letter-spacing so the blocky font
+   has room to breathe. Color shifted from plain DodgerBlue to a
+   slightly brighter electric blue for better contrast on the dark bg. */
+h1 {
+  color: #4FA8FF;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(79, 168, 255, 0.5);
+  margin: 0 0 18px;
+}
+
+/* CHANGE 3: New tagline using a monospace body font (JetBrains Mono).
+   This pairs a second, readable typeface against the display pixel
+   font — same personality, but legible at paragraph size,
+   which is what makes the page feel professional rather than a demo. */
+.tagline {
+  font-family: 'JetBrains Mono', monospace;
+  color: #A9B4D0;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+}
 
 .frame {
   width: 90%;
   margin: 40px auto;
   text-align: center;
 }
+
 button {
-  margin: 60px;
+  margin: 30px;
+  font-family: 'JetBrains Mono', monospace;
 }
+
 .hub-btn {
   width: 200px;
   height: 100px;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px White,
-   7px 7px 20px 0px White,
-   4px 4px 5px 0px White;
   outline: none;
 }
+
+/* CHANGE 4: Replaced the pure-white box-shadow glow with a glow that
+   matches the button's own gradient colors (pink/blue). A white glow
+   on a dark page reads like a blown-out photo; a colored glow reads
+   like an intentional neon-sign effect. Also softened the blur/spread
+   so it feels crisp instead of hazy. */
 .Mover {
   background: DeepPink;
-background: radial-gradient(circle, DeepPink 0%, CornflowerBlue 100%);
+  background: radial-gradient(circle, DeepPink 0%, CornflowerBlue 100%);
   color: White;
   line-height: 42px;
   padding: 0;
   border: none;
+  box-shadow:
+    0 0 15px rgba(255, 20, 147, 0.35),
+    0 0 25px rgba(100, 149, 237, 0.25);
 }
 
-.Mover:hover{
+.Mover:hover {
   background: CornflowerBlue;
   color: Black;
- box-shadow:inset 2px 2px 2px 0px Gray,
-   7px 7px 20px 0px Gray,
-   4px 4px 5px 0px Gray;
+  box-shadow:
+    0 0 20px rgba(100, 149, 237, 0.55),
+    0 0 35px rgba(255, 20, 147, 0.35);
   outline: none;
 }
 
@@ -58,4 +111,16 @@ background: radial-gradient(circle, DeepPink 0%, CornflowerBlue 100%);
 }
 .Mover span:hover:after {
   width: 100%;
+}
+
+/* CHANGE 5: Small-screen adjustment so the pixel-font heading and
+   buttons don't overflow on mobile. */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .hub-btn {
+    width: 160px;
+    height: 80px;
+  }
 }
