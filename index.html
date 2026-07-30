@@ -42,13 +42,23 @@
       </p>
     </section>
 
-    <!--Claw-slash divider: an original abstract mark, not tied to
-        any specific character or logo.-->
-    <div class="claw-divider" aria-hidden="true">
-      <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 5 L60 35" />
-        <path d="M25 2 L80 32" />
-        <path d="M40 0 L100 30" />
+    <!--Firework/sparkle divider: an original radiating burst.-->
+    <div class="firework-divider" aria-hidden="true">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke-linecap="round">
+          <line class="ray ray-long"  x1="50" y1="50" x2="50" y2="8"  stroke="#4FA8FF" stroke-width="2"/>
+          <line class="ray"           x1="50" y1="50" x2="78" y2="22" stroke="#FF3E9D" stroke-width="2"/>
+          <line class="ray ray-long"  x1="50" y1="50" x2="92" y2="50" stroke="#4FA8FF" stroke-width="2"/>
+          <line class="ray"           x1="50" y1="50" x2="78" y2="78" stroke="#FF3E9D" stroke-width="2"/>
+          <line class="ray ray-long"  x1="50" y1="50" x2="50" y2="92" stroke="#4FA8FF" stroke-width="2"/>
+          <line class="ray"           x1="50" y1="50" x2="22" y2="78" stroke="#FF3E9D" stroke-width="2"/>
+          <line class="ray ray-long"  x1="50" y1="50" x2="8"  y2="50" stroke="#4FA8FF" stroke-width="2"/>
+          <line class="ray"           x1="50" y1="50" x2="22" y2="22" stroke="#FF3E9D" stroke-width="2"/>
+          <circle class="spark" cx="50" cy="8"  r="2" fill="#4FA8FF"/>
+          <circle class="spark" cx="92" cy="50" r="2" fill="#4FA8FF"/>
+          <circle class="spark" cx="50" cy="92" r="2" fill="#4FA8FF"/>
+          <circle class="spark" cx="8"  cy="50" r="2" fill="#4FA8FF"/>
+        </g>
       </svg>
     </div>
 
@@ -63,6 +73,34 @@
         <li>SQL</li>
         <li>Git</li>
       </ul>
+    </section>
+
+    <!--Projects: replace with your real projects-->
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>[Project One]</h3>
+          <p>One-line description of what it does and why you built it.</p>
+          <div class="tag-list small">
+            <span>Tech</span><span>Tech</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>[Project Two]</h3>
+          <p>One-line description of what it does and why you built it.</p>
+          <div class="tag-list small">
+            <span>Tech</span><span>Tech</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>[Project Three]</h3>
+          <p>One-line description of what it does and why you built it.</p>
+          <div class="tag-list small">
+            <span>Tech</span><span>Tech</span>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
