@@ -128,17 +128,29 @@ button {
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* CHANGE 13: .hub-btn is now used on both <button> and <a> elements
+   (project category links), so font/margin/underline/color need to be
+   set directly on .hub-btn rather than relying on the "button"
+   selector, which anchors don't match. */
 .hub-btn {
   width: 200px;
   height: 100px;
   border-radius: 5px;
   padding: 10px 25px;
   font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
   background: transparent;
   cursor: pointer;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   outline: none;
+  margin: 30px;
+  text-decoration: none;
+  box-sizing: border-box;
   /* CHANGE 8: Buttons start hidden/dropped and animate in once
      .is-visible is added by the boot-sequence script, so they arrive
      after the tagline finishes typing — like a game menu rendering
@@ -162,8 +174,6 @@ button {
   background: DeepPink;
   background: radial-gradient(circle, DeepPink 0%, CornflowerBlue 100%);
   color: White;
-  line-height: 42px;
-  padding: 0;
   border: none;
   box-shadow:
     0 0 15px rgba(255, 20, 147, 0.35),
@@ -341,6 +351,26 @@ h2 {
 .tag-list.small span {
   font-size: 0.7rem;
   padding: 4px 10px;
+}
+
+/* CHANGE 14: Simple "back home" link used on sub-pages (Projects hub,
+   placeholder pages) so navigation never dead-ends. */
+.back-link {
+  margin-top: 40px;
+}
+
+.back-link a {
+  font-family: 'JetBrains Mono', monospace;
+  color: #A9B4D0;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(169, 180, 208, 0.4);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-link a:hover {
+  color: #4FA8FF;
+  border-color: #4FA8FF;
 }
 
 .project-grid {
