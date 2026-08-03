@@ -1,1 +1,95 @@
 
+/* file: assignment01-updated.css
+   Modernized 2026 restyle of Assignment 01 (original made 2022).
+   Loads after the shared Style.css — this file only adds the
+   assignment-specific layout (table, form, multiplication grid). */
+
+.assignment-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.assignment-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #A9B4D0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.assignment-note code {
+  background: rgba(79, 168, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #4FA8FF;
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(79, 168, 255, 0.2);
+}
+
+.news-table td {
+  border: 1px solid rgba(79, 168, 255, 0.15);
+  padding: 20px;
+  vertical-align: top;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #C7CEE3;
+}
+
+.news-table .headline {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  color: #4FA8FF;
+  letter-spacing: 1px;
+  padding: 16px;
+  background: rgba(79, 168, 255, 0.06);
+}
+
+.news-table label {
+  display: block;
+  margin-bottom: 6px;
+  color: #A9B4D0;
+}
+
+.news-table input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 14px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(79, 168, 255, 0.3);
+  border-radius: 4px;
+  color: #E8E8F0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.news-table input[type="text"]:focus {
+  outline: none;
+  border-color: #4FA8FF;
+  box-shadow: 0 0 8px rgba(79, 168, 255, 0.4);
+}
+
+.mult-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.mult-table td {
+  border: 1px solid rgba(255, 62, 157, 0.35);
+  padding: 6px 10px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #C7CEE3;
+}
+
+.news-table img {
+  border-radius: 8px;
+  border: 1px solid rgba(79, 168, 255, 0.2);
+  box-shadow: 0 0 12px rgba(79, 168, 255, 0.15);
+}
