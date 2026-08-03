@@ -23,6 +23,25 @@
   color: #4FA8FF;
 }
 
+/* CHANGE: plain paragraphs (e.g. the "Hello there!" intro line) had
+   no class, so they fell back to the browser's default black text —
+   invisible against the dark background. Scoping to .page keeps this
+   from affecting anything outside this assignment page. */
+.page p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: #C7CEE3;
+  text-align: center;
+}
+
+.page code {
+  background: rgba(79, 168, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #4FA8FF;
+  font-family: 'JetBrains Mono', monospace;
+}
+
 .news-table {
   width: 100%;
   border-collapse: collapse;
