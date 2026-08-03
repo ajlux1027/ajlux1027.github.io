@@ -1,0 +1,214 @@
+/* file: assignment02-updated.css
+   Modernized 2026 restyle of Assignment 02 (original made 2022).
+   Every concept from the original is preserved — element/class/id
+   selectors, inline/internal/external CSS, display values, box model,
+   position values, attribute selectors, pseudo-classes, text-align —
+   just reskinned to the portfolio's dark/neon palette instead of the
+   original teaching colors (skyblue/yellow/gray/green). */
+
+body {
+  background-color: #12121C;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-family: 'JetBrains Mono', monospace;
+  color: #A9B4D0;
+}
+
+/* Part C requirement: sticky nav. Recolored from green to the site's
+   blue/dark palette, still sticky to top on scroll. */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(18, 18, 28, 0.9);
+  border-bottom: 1px solid rgba(79, 168, 255, 0.3);
+  padding: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  text-align: center;
+  z-index: 5;
+}
+
+nav a {
+  color: #4FA8FF;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-shadow: 0 0 8px rgba(79, 168, 255, 0.6);
+}
+
+section {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+section h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  color: #FF3E9D;
+  margin-top: 30px;
+}
+
+section p, section li {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #C7CEE3;
+  line-height: 1.6;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(79, 168, 255, 0.2);
+}
+
+/* Part A: id selector demo */
+#igottabeme {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Part A: class selector demo */
+.classy {
+  margin-left: 10px;
+  color: #E8E8F0;
+}
+
+/* Part B: box model + div spacing */
+div {
+  margin-bottom: 30px;
+}
+
+/* Part B: span box model + display-value demo. Recolored from
+   yellow/blue to the site's pink/blue neon glow, box model values
+   (height/width/padding/border) unchanged. */
+span {
+  height: 50px;
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid #4FA8FF;
+  background-color: rgba(255, 62, 157, 0.15);
+  color: #E8E8F0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+span.a { display: inline; }
+span.b { display: block; }
+span.c { display: inline-block; }
+
+/* Part C: attribute-selector + position-value demo. Same position
+   values as the original (fixed/relative/absolute), just recolored
+   via drop-shadow instead of a background swap. */
+img[alt="cat icon"] {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  filter: drop-shadow(0 0 6px rgba(79, 168, 255, 0.5));
+}
+
+img[alt="dog icon"] {
+  position: relative;
+  right: 50px;
+  bottom: 150px;
+  filter: drop-shadow(0 0 6px rgba(255, 62, 157, 0.5));
+}
+
+img[alt="bird icon"] {
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  z-index: 1;
+  filter: drop-shadow(0 0 6px rgba(79, 168, 255, 0.5));
+}
+
+#positionMe {
+  position: relative;
+}
+
+/* Part D: table striping/hover/text-align demo, recolored dark */
+.stripey tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.stripey tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+.stripey th {
+  color: #4FA8FF;
+  background-color: rgba(79, 168, 255, 0.08);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.stripey td {
+  font-family: 'JetBrains Mono', monospace;
+  color: #C7CEE3;
+  border: 1px solid rgba(79, 168, 255, 0.15);
+  padding: 6px 10px;
+}
+
+.mousey td:hover {
+  background-color: rgba(255, 62, 157, 0.15);
+}
+
+.rightey td {
+  text-align: right;
+}
+
+/* Part D: form + pseudo-class focus demo */
+fieldset {
+  border: 1px solid rgba(79, 168, 255, 0.3);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+legend {
+  font-family: 'JetBrains Mono', monospace;
+  color: #4FA8FF;
+  padding: 0 8px;
+}
+
+input[type="text"].pinkey {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(79, 168, 255, 0.3);
+  border-radius: 4px;
+  color: #E8E8F0;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 6px;
+}
+
+input[type="text"].pinkey:focus {
+  outline: none;
+  background-color: rgba(255, 62, 157, 0.12);
+  border-color: #FF3E9D;
+  box-shadow: 0 0 8px rgba(255, 62, 157, 0.4);
+}
+
+button[type="submit"] {
+  font-family: 'JetBrains Mono', monospace;
+  background: DeepPink;
+  background: radial-gradient(circle, DeepPink 0%, CornflowerBlue 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.35), 0 0 25px rgba(100, 149, 237, 0.25);
+}
+
+footer {
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #6B7591;
+  margin: 60px 0 20px;
+}
