@@ -8,6 +8,12 @@
 
 body {
   background-color: #12121C;
+  color: #C7CEE3;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+label {
+  color: #A9B4D0;
 }
 
 header {
