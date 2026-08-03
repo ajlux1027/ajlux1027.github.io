@@ -409,6 +409,62 @@ h2 {
   text-shadow: 0 0 8px rgba(79, 168, 255, 0.5);
 }
 
+/* CHANGE 16: Original vs Updated comparison grid for CIS255 — three
+   columns (assignment label, original 2022 link, updated 2026 link).
+   Muted/non-link text is used for updated versions not built yet. */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  border: 1px solid rgba(79, 168, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.compare-grid > div {
+  padding: 12px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(79, 168, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.compare-grid .col-head {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4FA8FF;
+  background: rgba(79, 168, 255, 0.06);
+  font-weight: 500;
+}
+
+.compare-grid .assignment-label {
+  color: #A9B4D0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.compare-grid a {
+  color: #C7CEE3;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(79, 168, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.compare-grid a:hover {
+  color: #4FA8FF;
+  border-color: #4FA8FF;
+}
+
+.compare-grid .pending {
+  color: #5A6478;
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
