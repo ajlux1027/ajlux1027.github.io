@@ -448,15 +448,28 @@ h2 {
 }
 
 .compare-grid a {
-  color: #C7CEE3;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
   text-decoration: none;
-  border-bottom: 1px solid rgba(79, 168, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  background: DeepPink;
+  background: radial-gradient(circle, DeepPink 0%, CornflowerBlue 100%);
+  box-shadow:
+    0 0 10px rgba(255, 20, 147, 0.35),
+    0 0 16px rgba(100, 149, 237, 0.25);
+  transition: all 0.3s ease;
 }
 
 .compare-grid a:hover {
-  color: #4FA8FF;
-  border-color: #4FA8FF;
+  background: CornflowerBlue;
+  color: black;
+  box-shadow:
+    0 0 14px rgba(100, 149, 237, 0.55),
+    0 0 22px rgba(255, 20, 147, 0.35);
 }
 
 .compare-grid .pending {
